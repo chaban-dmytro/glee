@@ -3,6 +3,133 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    color: $menu;
+    @extend %rubik-500;
+  }
+  &__list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__list-link {
+    font-style: 15px;
+    transition: all 0.3s;
+    &:hover {
+      border-bottom: 1px solid;
+    }
+  }
+  &__list-link--active {
+    color: $title;
+    border-bottom: 1px solid $title;
+  }
+}
+
+.user-nav {
+  display: flex;
+   &__link-search {
+    display: block;
+    background-color: #edf1f4;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url(../images/icons/icon.svg);
+      width: 100%;
+      height: 100%;
+      position: absolute; 
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &__link-fav {
+    display: block;
+    background-color: #fcd7b6;
+    width: 92px;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url(../images/icons/icon2.svg);
+      width: 100%;
+      height: 100%;
+      position: absolute; 
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &::after {
+      content: '|';
+      color: #fde7d3;
+      font-size: 35px;
+      position: absolute;
+      right: -5px;
+      top: 5px;
+    }
+  }
+  &__link-basket {
+    display: block;
+    background-color: #fcd7b6;
+    width: 88px;
+    height: 50px;
+    border-radius: 0 25px 25px 0;
+    position: relative;
+    margin-right: 20px;
+    &::before {
+      content: '';
+      background-image: url(../images/icons/icon3.svg);
+      width: 100%;
+      height: 100%;
+      position: absolute; 
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &__link-menu {
+    display: block;
+    background-color: #a3bbc8;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url(../images/icons/icon4.svg);
+      width: 100%;
+      height: 100%;
+      position: absolute; 
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  &__num {
+    position: absolute;
+    color: $menu;
+    top: 10px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+}
+
 
 
 
