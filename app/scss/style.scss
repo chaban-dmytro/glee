@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -127,8 +128,142 @@
     background-color: #fff;
     border-radius: 50%;
   }
-
 }
+
+.top-slider {
+  &__item {
+    display: flex !important;
+    justify-content: center;
+    background-color: #fcd7b6;
+    align-items: center;
+    height: 100%;
+    padding: 100px 10px;
+  }
+  &__info {
+    max-width: 430px;
+    margin-right: 120px;
+    :not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__info-title {
+    font-size: 72px;
+    color: $title;
+    text-transform: uppercase;
+  }
+  &__info-text {
+    @extend %rubik-400;  
+    font-size: 18px;
+    color: $menu;
+    max-width: 370px;
+  }
+  &__info-link {
+    display: inline-block;
+    color: #fff;
+    background-color: $btn;
+    padding: 25px 100px 25px 30px;
+    position: relative;
+    &::after {
+      content: '';
+      background-image: url(../images/icons/arrow.svg);
+      width: 30px;
+      height: 15px;
+      right: 30px;
+      position: absolute; 
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    right: 50%;
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      button {
+        font-size: 11px;
+        color: $title;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        background-color: #fde3cc;
+        transition: background-color 0.5s;
+        &:hover {
+          background-color: #fff;
+        }
+      }
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  padding: 45px 0;
+  background-color: #fef7f0;
+  &__item {
+    padding-left: 80px;
+    position: relative;
+    max-width: 300px;
+  }
+  &__support {
+    &::before {
+      content: '';
+      background-image: url(../images/icons/benefit1.svg);
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      background-repeat: no-repeat;
+    }
+  }&__delivery {
+    &::before {
+      content: '';
+      background-image: url(../images/icons/benefit2.svg);
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      background-repeat: no-repeat;
+    }
+  }&__payment {
+    &::before {
+      content: '';
+      background-image: url(../images/icons/benefit3.svg);
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      background-repeat: no-repeat;
+    }
+  }
+ 
+  &__item-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  &__item-text {
+    font-size: 16px;
+    line-height: 2;
+    color: #585858;
+    @extend %dmsans-400;
+  }
+}
+
+
+
+
 
 
 
