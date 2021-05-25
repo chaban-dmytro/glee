@@ -1,0 +1,36 @@
+
+body {
+  font-size: 15px;
+  line-height: 1;
+  color: $default;
+  @extend %dmsans-700;
+}
+
+
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-smaller {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  font-size: 36px;
+}
+
+.btn {
+  color: #fff;
+  background-color: $btn;
+  border: 1px solid $btn;
+  transition: all 0.3s;
+  &:hover {
+    color: $btn;
+    background-color: #fff;
+  }
+}
