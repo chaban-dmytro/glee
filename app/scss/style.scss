@@ -283,6 +283,13 @@
     color: #8b8b8b;
     border: none;
     background: none;
+    transition: color 0.3s;
+    &:hover {
+      color: #191919
+    }
+  }
+  .mixitup-control-active {
+    color: #191919
   }
 }
 
