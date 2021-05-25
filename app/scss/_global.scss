@@ -20,3 +20,14 @@ body {
 .title {
   font-size: 36px;
 }
+
+.btn {
+  color: #fff;
+  background-color: $btn;
+  border: 1px solid $btn;
+  transition: all 0.3s;
+  &:hover {
+    color: $btn;
+    background-color: #fff;
+  }
+}
