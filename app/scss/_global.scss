@@ -1,12 +1,41 @@
 
 body {
-  font-size: 15px;
-  line-height: 1;
-  color: $default;
-  @extend %dmsans-700;
+  font-family: $rubik;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $blue-700;
+  background-color: $white;
 }
 
+a {
+  transition: color 0.3s;
+  
+  &:hover {
+    color: $blue-800;
+  }
+}
 
+path {
+  transition: fill 0.3s;
+}
+
+:focus {
+  outline: none;
+  box-shadow: 10px 10px 10px 0px $blue-400;
+  border-radius: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 .container {
   max-width: 1800px;
@@ -14,23 +43,29 @@ body {
   padding: 0 15px;
 }
 
-.container-smaller {
+.container-sm {
   max-width: 1230px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 
 .title {
+  color: $black-700;
+  font-family: $dmsans;
+  font-weight: 700;
   font-size: 36px;
 }
 
 .btn {
-  color: #fff;
-  background-color: $btn;
-  border: 1px solid $btn;
-  transition: all 0.3s;
+  font-family: $dmsans;
+  font-weight: 400;
+  color: $white;
+  line-height: 0;
+  background-color: $blue-300;
+  border: 1px solid $blue-300;
+  transition: color 0.3s, background-color 0.3s;
+
   &:hover {
-    color: $btn;
-    background-color: #fff;
+    color: $blue-300;
+    background-color: $white;
   }
 }
+

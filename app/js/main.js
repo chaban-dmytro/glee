@@ -1,11 +1,10 @@
 $ (function() {
 
-  $('.top-slider__inner').slick({
+  $('.slider-homepage__inner').slick({
     dots: true,
     arrows: false,
-    autoplay: true
   })
 
-  var mixer = mixitup('.products-item');
+  var mixer = mixitup('.products__items');
 
 });
