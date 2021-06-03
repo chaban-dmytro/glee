@@ -1,34 +1,86 @@
-$default: #191919;
-$title: #243f4d;
-$menu: #436372;
-$btn: #a3bbc8;
 
-%dmsans-400{
-  font-family: 'DMSans-Regular', sans-serif;
-  font-weight: 400;
+// black
+$black-700: #191919;
+
+// white
+$white: #fff;
+
+// blue
+$blue-300: #a3bbc8;
+$blue-400: #436372;
+$blue-700: #243f4d;
+$blue-750: #234969;
+$blue-800: #1f2044;
+
+// grey
+$grey-400: #edf1f4;
+$grey-500: #8b8b8b;
+$grey-700: #7b7b7b;
+$grey-800: #585858;
+$grey-900: #414141;
+
+// yellow
+$yellow-200: #fef7f0;
+$yellow-300: #fde3cc;
+$yellow-400: #fde7d3;
+$yellow-700: #fcd7b6;
+
+// fonts
+$dmsans: 'DMSans', sans-serif;
+$rubik: 'Rubik', sans-serif;
+
+
+@mixin linecalc($n, $lh) {
+  @if $n == 1 {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: $lh;
+  } @else {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      -webkit-line-clamp: $n;
+      -moz-line-clamp: $n;
+      line-clamp: $n;
+      -webkit-box-orient: vertical;
+      -moz-box-orient: vertical;
+      box-orient: vertical;
+      overflow: hidden;
+      line-height: $lh;
+      height: $lh * $n;
+  }
 }
 
-%dmsans-500{
-  font-family: 'DMSans-Medium', sans-serif;
-  font-weight: 400;
-}
+// %dmsans-400{
+//   font-family: 'DMSans-Regular', sans-serif;
+//   font-weight: 400;
+// }
 
-%dmsans-700{
-  font-family: 'DMSans-Bold', sans-serif;
-  font-weight: 700;
-}
+// %dmsans-500{
+//   font-family: 'DMSans-Medium', sans-serif;
+//   font-weight: 400;
+// }
 
-%rubik-400{
-  font-family: 'Rubik-Regular', sans-serif;
-  font-weight: 400;
-}
+// %dmsans-700{
+//   font-family: 'DMSans-Bold', sans-serif;
+//   font-weight: 700;
+// }
 
-%rubik-500{
-  font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 500;
-}
+// %rubik-400{
+//   font-family: 'Rubik-Regular', sans-serif;
+//   font-weight: 400;
+// }
 
-%rubik-700{
-  font-family: 'Rubik-Bold', sans-serif;
-  font-weight: 700;
-}
+// %rubik-500{
+//   font-family: 'Rubik-Medium', sans-serif;
+//   font-weight: 500;
+// }
+
+// %rubik-700{
+//   font-family: 'Rubik-Bold', sans-serif;
+//   font-weight: 700;
+// }
+
+
+
