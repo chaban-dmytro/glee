@@ -20,12 +20,6 @@ path {
   transition: fill 0.3s;
 }
 
-:focus {
-  outline: none;
-  box-shadow: 10px 10px 10px 0px $blue-400;
-  border-radius: inherit;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -41,10 +35,10 @@ path {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.container-sm {
-  max-width: 1230px;
+  
+  &--sm {
+    max-width: 1200px;
+  }
 }
 
 .title {

@@ -1,0 +1,137 @@
+.products {
+  text-align: center;
+  background-color: $white;
+
+  &__title {
+    padding-top: 55px;
+    @include linecalc(1, 2); 
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    grid-auto-rows: 380px;
+    gap: 30px;
+    row-gap: 40px;
+    padding: 30px 0;
+  }
+
+  &__item {
+    border-radius: 10px;
+    background-color: $white;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  }
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+
+  &__item {
+    max-width: 90px;
+    @include linecalc(1, 1); 
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__btn {
+    font-family: $dmsans;
+    font-weight: 700;
+    font-size: 16px;
+    color: $grey-500;
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $black-700;
+    }
+  }
+}
+
+.mixitup-control-active {
+  color: $black-700;
+}
+
+.product-card {
+  margin: 0 auto;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  font-family: $dmsans;
+  font-weight: 700;
+  font-size: 16px;
+  color: $blue-700;
+  overflow: hidden;
+
+  &:hover,
+  &:focus-within {
+    outline: transparent;
+
+    .product-card__link-box {
+      transform: translateY(0);
+    }
+  }
+
+  &__img {
+    width: 210px;
+    height: 240px;
+    object-fit: scale-down;
+    margin-bottom: 30px;
+  }
+
+  &__link-box {
+    position: absolute;
+    display: flex;
+    max-width: 170px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    align-items: center;
+    bottom: 100px;
+    transform: translateY(150px);
+    transition: transform 0.5s;
+  }
+
+  &__link {
+    background-color: $white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding-top: 13px;
+    box-shadow: -2px 3px 11px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      background-color: $blue-300;
+      
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    color: $blue-700;
+    margin-bottom: 15px;
+    @include linecalc(1, 1); 
+  }
+
+  &__price {
+    font-size: 16px;
+    display: block;
+    color: $blue-300;
+    @include linecalc(1, 1); 
+  }
+}
