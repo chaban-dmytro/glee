@@ -7,7 +7,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    padding: 70px 0;
+    padding: 85px 0;
     border-bottom: 1px solid $grey-400;
   }
 
@@ -107,8 +107,8 @@
   &__wrap {
     padding-left: 15px;
     max-width: 80px;
+    transition: transform 0.5s;
     @include linecalc(1, 1.2); 
-
 
     &:not(:last-child) {
       padding-right: 15px;
@@ -122,7 +122,7 @@
     }
 
     &:hover {
-      color: $blue-750;
+      transform: scale(1.2);
     }
   }
 }

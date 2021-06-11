@@ -1,4 +1,6 @@
 .slider-homepage {
+    padding-top: 140px;
+    
   &__item {
     background-color: $yellow-700;
   }
@@ -7,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 90px 20px;
+    padding: 90px 0;
   }
 
   &__info {
