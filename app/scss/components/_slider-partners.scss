@@ -1,0 +1,22 @@
+.slider-partners {
+  background-color: $yellow-200;
+  max-height: 260px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    margin: 90px 0;
+  }
+  
+  &__img {
+    margin: 0 auto;
+    max-height: 100px;
+    object-fit: scale-down;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

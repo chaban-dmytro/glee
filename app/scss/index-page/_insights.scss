@@ -1,0 +1,104 @@
+.insights {
+  background: linear-gradient(to bottom, transparent 72%, $yellow-200 50%);
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 30px;
+    align-items: center;
+  }
+
+  &__title {
+    @include linecalc (1, 2);
+    max-width: 75%;
+
+    &-link {
+      font-family: $dmsans;
+      font-weight: 700;
+      font-size: 16px;
+      color: $black-700;
+
+      &::after {
+        content: '>';
+        font-size: 20px;
+        font-weight: 300;
+        padding-left: 20px;
+      }
+
+      &:hover {
+        color: $yellow-700
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    grid-auto-rows: 420px;
+    gap: 30px;
+  }
+  
+  &__item{
+    position: relative;
+    border-radius: 10px;
+    background-color: $white;
+    
+
+    &-info{
+      display: flex;
+      margin: 0 30px;
+      color: $blue-770;
+      font-size: 12px;
+    }
+    
+    &-data {
+      margin-right: 25px;
+    }
+
+    &-data,
+    &-author {
+      max-width: 50%;
+      @include linecalc (1, 2);
+    }
+  }
+  
+  &__img {
+    max-height: 250px;
+    height: 100%;
+    margin-bottom: 25px;
+    object-fit: scale-down;
+  }
+
+  &__link {
+    position: absolute;
+    display: block;
+    top: 228px;
+    left: 27px;
+    max-width: 110px;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    background-color: $blue-300;
+    border-radius: 20px;
+    @include linecalc (1, 1);
+  }
+
+  &__text {
+    font-family: $dmsans;
+    font-weight: 700;
+    color: $black-500;
+    font-size: 18px;
+    margin: 0 30px;
+    max-width: 300px;
+    max-height: 80px;
+    height: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $grey-400;
+    margin-bottom: 20px;
+    @include linecalc (3, 1.2);
+  }
+
+
+
+}
