@@ -12,13 +12,18 @@
 
     &::before {
       content: "";
-      background-image: url(../images/icons/benefit1.svg);
       position: absolute;
       width: 50px;
       height: 50px;
       left: 0;
       top: 15px;
       background-repeat: no-repeat;
+    }
+
+    &--support {
+      &::before {
+        background-image: url(../images/icons/benefit1.svg);
+      }
     }
     
     &--delivery {

@@ -7,7 +7,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    padding: 85px 0;
+    padding: 85px 0 80px;
     border-bottom: 1px solid $grey-400;
   }
 
@@ -22,6 +22,11 @@
 
   &__contacts {
     @include linecalc(5, 1.5); 
+
+    a:focus {
+      outline: none;
+      color: red;
+    } 
 
     p {
       text-transform: uppercase;
@@ -59,6 +64,12 @@
     }
   }
 
+  &__link:focus{
+      outline: none;
+      color: red;
+  }
+  
+
   &__text {
     margin-bottom: 40px;
     max-width: 270px;
@@ -74,7 +85,7 @@
   &__input {
     max-width: 170px;
     padding: 10px 2px 15px 15px;
-    border: none;
+    border: 1px solid $yellow-200;
     background-color: $yellow-200;
 
     &::placeholder {

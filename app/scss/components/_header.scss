@@ -8,6 +8,10 @@
 
   &__logo {
     margin-right: 155px;
+
+    @include r($brackpoint-1200) {
+      margin-right: 20px;
+    }
   }
 }
 
@@ -17,27 +21,72 @@
     max-width: 170px;
     max-height: 60px;
     object-fit: cover;
-  }
+  }  
 }
 
 .menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   color: $blue-400;
   padding: 45px 0;
   font-family: $rubik;
   font-weight: 500;
+  transition: padding 0.5s;
+
+  @include r($brackpoint-990) {
+    padding: 10px 0;
+  } 
 
   &__list {
     display: flex;
+
+    @include r($brackpoint-990) {
+      transform: translateY(-160%);
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $grey-400;
+      z-index: 5;
+      transition: transform 0.3s;
+    }
+
+    @include r($brackpoint-768) {
+      top: 160px;
+    }
+  }
+
+  &__list--active {
+    @include r($brackpoint-990) {
+      transform: translateY(0);
+    }
   }
 
   &__item {
     max-width: 85px;
-    
+
+    @include r($brackpoint-990) {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      padding: 0 15px;
+    }
+       
     &:not(:last-child) {
     margin-right: 35px;
+
+      @include r($brackpoint-1200) {
+        margin-right: 20px;
+      }
+
+      @include r($brackpoint-990) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -47,6 +96,12 @@
     border-bottom: 1px solid transparent;
     transition: color 0.5s, border-bottom 0.5s;
     @include linecalc(1, 1.2); 
+
+    @include r($brackpoint-990) {
+      display: block;
+      padding: 15px 0 15px;
+      width: 100%;
+    }
 
     &:hover {
       color: $black-700;
@@ -58,21 +113,59 @@
       border-bottom: 1px solid;
     }
   }
+
+  &__btn {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    display: none;
+
+    @include r($brackpoint-990) {
+      display: block;
+    }
+
+    svg {
+      fill: $blue-300;
+    }
+  }
+}
+
+.menu__bg {
+  padding: 10px;
 }
 
 .user-nav {
   display: flex;
 
+  @include r($brackpoint-768) {
+    order: 2;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+
+  svg {
+    fill: $blue-700;
+  }
+
   &__search,
   &__other {
     display: block;
-    padding: 17px 13px 8px 16px;
+    padding: 17px 17px 14px 17px;
     background-color: $grey-400;
     border-radius: 50%;
     margin-right: 20px;
 
+    @include r($brackpoint-576) {
+      margin-right: 5px;
+    }
+
     &:hover {
-      path {
+      svg {
         fill: $white;
       }
     }
@@ -84,9 +177,13 @@
     margin-right: 0;
 
     &:hover {
-      path {
-        fill: $blue-800;
+      svg {
+        fill: $blue-700;
       }
+    }
+
+    svg {
+      fill: $white;
     }
   }
 
@@ -99,8 +196,13 @@
     margin-right: 20px;
     position: relative;
 
+    @include r($brackpoint-576) {
+      margin-right: 5px;
+
+    }
+
     &:hover {
-      path {
+      svg, path {
         fill: $white;
       }
     }
@@ -110,6 +212,7 @@
     padding: 21px 30px 5px 41px;
     border-radius: 25px 0 0 25px;
     margin-right: 0;
+ 
 
     &::after {
       content: "";

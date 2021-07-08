@@ -1,5 +1,4 @@
 .new-design {
-  padding-bottom: 120px;
     
   &__title {
     padding-top: 95px;
@@ -13,6 +12,8 @@
     grid-template-columns: repeat(3, 370px);
     grid-auto-rows: 250px;
     gap: 30px;
+    padding-bottom: 120px;
+
   }
 
   &__item {
@@ -23,7 +24,7 @@
     }
   }
 
-  .newdesign-card {
+  .design-card {
     position: relative;
     background-color: $grey-200;
     width: 100%;
@@ -55,12 +56,53 @@
     }
 
     &__style {
+      display: block;
       font-size: 16px;
       color: $blue-300;
+      max-width: 180px;
       @include linecalc(1, 1); 
     }
   }
 }
+
+.video {
+  height: 51vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+    &::before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+  }
+  
+  &::before {
+    content: "";
+    background-image: url(../images/video-play.svg);
+    width: 140px;
+    height: 140px;
+    z-index: 1;
+  }
+}
+
 
 
 

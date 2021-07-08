@@ -34,6 +34,13 @@ $yellow-700: #fcd7b6;
 $dmsans: 'DMSans', sans-serif;
 $rubik: 'Rubik', sans-serif;
 
+//brackpoints
+$brackpoint-1200: 1200;
+$brackpoint-990: 990;
+$brackpoint-768: 768;
+$brackpoint-576: 576;
+
+
 
 @mixin linecalc($n, $lh) {
   @if $n == 1 {
@@ -54,6 +61,12 @@ $rubik: 'Rubik', sans-serif;
       overflow: hidden;
       line-height: $lh;
       height: $lh * $n;
+  }
+}
+
+@mixin r($width) {
+  @media only screen and (max-width: $width + 'px') {
+    @content;
   }
 }
 

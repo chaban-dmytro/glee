@@ -1,16 +1,31 @@
 $ (function() {
 
+  $('.menu__btn').on('click', function(){
+    $('.menu__list').toggleClass('menu__list--active');
+  })
+
   $('.slider-homepage__inner').slick({
     dots: true,
     arrows: false,
   })
 
-  $('.slider-partners__items').slick({
+  $('.slider-partners__list').slick({
     dots: false,
     arrows: false,
     autoplay: true,
     slidesToShow: 5,
   })
+
+  $(window).scroll(function() {
+    var height = $(window).scrollTop();
+     /*Если сделали скролл на 100px задаём новый класс для header*/
+    if(height > 70){
+    $('.menu').addClass('menu__bg');
+    } else{
+    /*Если меньше 100px удаляем класс для header*/
+    $('.menu').removeClass('menu__bg');
+    }
+  });
 
   
 

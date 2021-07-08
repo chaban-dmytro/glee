@@ -20,26 +20,26 @@
    &__title {
 
     p:first-child {
-    font-family: $rubik;
-    font-weight: 500;
-    font-size: 72px;
-    line-height: 1;
-    color: $blue-700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    @include linecalc(3, 1); 
+      font-family: $rubik;
+      font-weight: 500;
+      font-size: 72px;
+      line-height: 1;
+      color: $blue-700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @include linecalc(3, 1); 
     }
 
     p:last-child {
-    font-family: $rubik;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 2;
-    color: $blue-400;
-    max-width: 370px;
-    text-transform: none;
-    margin-bottom: 20px;
-    @include linecalc(6, 2); 
+      font-family: $rubik;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 2;
+      color: $blue-400;
+      max-width: 370px;
+      text-transform: none;
+      margin-bottom: 20px;
+      @include linecalc(6, 2); 
     }
   }  
 
@@ -47,8 +47,12 @@
     display: inline-block;
     padding: 25px 30px 25px 30px;
 
+    svg {
+      fill: $white;
+    }
+
     &:hover {
-      path {
+      svg {
         fill: $blue-300;
       }
     }
@@ -81,39 +85,39 @@
     object-fit: cover;
     z-index: 5;
   }
-}
 
-.slick-dots {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 45px;
-  left: 50%;
-  right: 50%;
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    right: 50%;
 
-  li {
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-
-    button {
-      font-size: 11px;
-      color: $black-700;
-      width: 30px;
-      height: 30px;
-      border: none;
-      border-radius: 50%;
-      background-color: $yellow-300;
-      transition: background-color 0.5s;
-
-      &:hover {
-        background-color: $white;
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
       }
-    }
 
-    &.slick-active {
       button {
-        background-color: $white;
+        font-size: 11px;
+        color: $black-700;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        background-color: $yellow-300;
+        transition: background-color 0.5s;
+
+        &:hover {
+          background-color: $white;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: $white;
+        }
       }
     }
   }
