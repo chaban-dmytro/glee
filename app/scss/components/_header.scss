@@ -1,4 +1,3 @@
-
 .header {
   position: fixed;
   background-color: $white;
@@ -45,7 +44,7 @@
     @include r($brackpoint-990) {
       transform: translateY(-160%);
       position: absolute;
-      top: 80px;
+      top: 70px;
       left: 0;
       right: 0;
       flex-direction: column;
@@ -57,7 +56,7 @@
     }
 
     @include r($brackpoint-768) {
-      top: 160px;
+      top: 135px;
     }
   }
 
@@ -107,11 +106,11 @@
       color: $black-700;
       border-bottom: 1px solid;
     }
+  }
 
-    &--active {
+  &__link--active {
       color: $black-700;
       border-bottom: 1px solid;
-    }
   }
 
   &__btn {
@@ -123,14 +122,24 @@
     background-color: transparent;
     border: none;
     display: none;
+    transform: rotate(90deg);
+    transition: transform 0.5s;
 
     @include r($brackpoint-990) {
       display: block;
     }
-
+    
     svg {
       fill: $blue-300;
+
+      &:hover {
+        fill: $yellow-700;
+      }
     }
+  }
+
+  &__btn--active {
+    transform: rotate(0);
   }
 }
 

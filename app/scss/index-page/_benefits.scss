@@ -1,14 +1,23 @@
 .benefits {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 50px 0;
   background-color: $yellow-200;
   line-height: 2;
 
+  @include r($brackpoint-990) {
+    padding: 20px 0;
+  }
+
   &__item {
     padding-left: 80px;
     position: relative;
     max-width: 285px;
+
+    @include r($brackpoint-990) {
+      margin-bottom: 10px;;
+    }
 
     &::before {
       content: "";

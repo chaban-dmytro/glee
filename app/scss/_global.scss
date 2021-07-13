@@ -39,6 +39,10 @@ svg {
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
+
+  @include r($brackpoint-576) {
+    padding: 0 5px;
+  }
   
   &--sm {
     max-width: 1200px;
@@ -50,6 +54,10 @@ svg {
   font-family: $dmsans;
   font-weight: 700;
   font-size: 36px;
+
+  @include r($brackpoint-576) {
+    font-size: 25px;
+  }
 }
 
 .btn {

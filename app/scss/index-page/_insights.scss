@@ -1,16 +1,30 @@
 .insights {
   background: linear-gradient(to bottom, transparent 51%, $yellow-200 49%);
 
+  @include r($brackpoint-1200) {
+    background: linear-gradient(to bottom, transparent 35%, $yellow-200 50%);
+  }
+
   &__top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 100px 0 30px;
     align-items: center;
+
+    @include r($brackpoint-576) {
+      padding: 40px 0 15px;
+    }
   }
 
   &__title {
     @include linecalc (1, 2);
     max-width: 75%;
+
+    @include r($brackpoint-576) {
+      margin-right: 15px;
+      max-width: 100%;
+    }
   }
    
   &__title-link {
@@ -38,6 +52,12 @@
     grid-template-columns: repeat(3, 370px);
     grid-auto-rows: 420px;
     gap: 30px;
+    justify-content: center;
+
+    @include r($brackpoint-1200) {
+      display: flex;  
+      flex-wrap: wrap;  
+    }
   }
 }
 
@@ -52,7 +72,7 @@
     content: '';
     position: absolute;
     height: 250px;
-    width: 370px;
+    width: inherit;
     border-radius: 10px;
     top: 0;
     right: 0;
@@ -142,7 +162,6 @@
       background-image: url(../../images/icons/calendar.svg);
     }
   }
-  
 
   &__author::before {
     background-image: url(../../images/icons/author.svg);
@@ -164,8 +183,19 @@
   display: flex;
   justify-content: center;
 
+  &__list {
+    @include r($brackpoint-1200) {
+      margin: 0 auto;
+      max-width: 90vw;
+    }
+  }
+
   &__item {
     margin: 90px 0;
+
+    @include r($brackpoint-576) {
+      margin: 40px 0 35px;
+    }
   }
   
   &__img {

@@ -1,7 +1,8 @@
 $ (function() {
 
   $('.menu__btn').on('click', function(){
-    $('.menu__list').toggleClass('menu__list--active');
+    $('.menu__list').toggleClass('menu__list--active'),
+    $('.menu__btn').toggleClass('menu__btn--active');
   })
 
   $('.slider-homepage__inner').slick({
@@ -14,6 +15,20 @@ $ (function() {
     arrows: false,
     autoplay: true,
     slidesToShow: 5,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 577,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   })
 
   $(window).scroll(function() {
