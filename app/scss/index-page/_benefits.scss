@@ -1,0 +1,68 @@
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 0;
+  background-color: $yellow-200;
+  line-height: 2;
+
+  @include r($brackpoint-990) {
+    padding: 20px 0;
+  }
+
+  &__item {
+    padding-left: 80px;
+    position: relative;
+    max-width: 285px;
+
+    @include r($brackpoint-990) {
+      margin-bottom: 10px;;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      top: 15px;
+      background-repeat: no-repeat;
+    }
+
+    &--support {
+      &::before {
+        background-image: url(../images/icons/benefit1.svg);
+      }
+    }
+    
+    &--delivery {
+      &::before {
+        background-image: url(../images/icons/benefit2.svg);
+      }
+    }
+  
+    &--payment {
+      &::before {
+        background-image: url(../images/icons/benefit3.svg);
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    font-family: $dmsans;
+    font-weight: 700;
+    font-size: 18px;
+    color: $grey-900;
+    margin-bottom: 15px;
+    @include linecalc(3, 1); 
+  }
+
+  &__text {
+    font-family: $dmsans;
+    font-weight: 400;
+    font-size: 16px;
+    color: $grey-800;
+    @include linecalc(3, 1.2); 
+  }
+}

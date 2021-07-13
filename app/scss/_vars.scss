@@ -1,6 +1,7 @@
 
 // black
 $black-700: #191919;
+$black-500: #262626;
 
 // white
 $white: #fff;
@@ -10,9 +11,11 @@ $blue-300: #a3bbc8;
 $blue-400: #436372;
 $blue-700: #243f4d;
 $blue-750: #234969;
+$blue-770: #222933;
 $blue-800: #1f2044;
 
 // grey
+$grey-200: #f8f8f8;
 $grey-400: #edf1f4;
 $grey-500: #8b8b8b;
 $grey-700: #7b7b7b;
@@ -20,14 +23,24 @@ $grey-800: #585858;
 $grey-900: #414141;
 
 // yellow
+$yellow-100: #feefe2;
 $yellow-200: #fef7f0;
 $yellow-300: #fde3cc;
 $yellow-400: #fde7d3;
+
 $yellow-700: #fcd7b6;
 
 // fonts
 $dmsans: 'DMSans', sans-serif;
 $rubik: 'Rubik', sans-serif;
+
+//brackpoints
+$brackpoint-1460: 1460; //only for top slider//
+$brackpoint-1200: 1220;
+$brackpoint-990: 990;
+$brackpoint-768: 768;
+$brackpoint-576: 576;
+
 
 
 @mixin linecalc($n, $lh) {
@@ -49,6 +62,12 @@ $rubik: 'Rubik', sans-serif;
       overflow: hidden;
       line-height: $lh;
       height: $lh * $n;
+  }
+}
+
+@mixin r($width) {
+  @media only screen and (max-width: $width + 'px') {
+    @content;
   }
 }
 

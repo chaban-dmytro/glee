@@ -1,0 +1,159 @@
+.slider-homepage {
+    padding-top: 140px;
+    
+  &__item {
+    background-color: $yellow-700;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 0;
+
+    @include r($brackpoint-768) {
+      flex-direction: column;
+      padding: 20px 0;
+    }
+  }
+
+  &__info {
+    max-width: 430px;
+    margin-bottom: 50px;
+  }
+
+   &__title {
+
+    p:first-child {
+      font-family: $rubik;
+      font-weight: 500;
+      font-size: 72px;
+      line-height: 1;
+      color: $blue-700;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @include linecalc(3, 1); 
+
+      @include r($brackpoint-768) {
+        font-size: 50px;
+      }
+
+      @include r($brackpoint-576) {
+        font-size: 40px;
+      }
+    }
+
+    p:last-child {
+      font-family: $rubik;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 2;
+      color: $blue-400;
+      max-width: 370px;
+      text-transform: none;
+      margin-bottom: 20px;
+      @include linecalc(6, 2); 
+    }
+  }  
+
+  &__link {
+    display: inline-block;
+    padding: 25px 30px 25px 30px;
+
+    svg {
+      fill: $white;
+    }
+
+    &:hover {
+      svg {
+        fill: $blue-300;
+      }
+    }
+
+    span {
+      margin-left: 40px;
+    }
+  }
+
+  &__picture {
+    width: 640px;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include r($brackpoint-1200) {
+      height: 100%;
+      width: 100%;
+    }
+
+    @include r($brackpoint-768) {
+      margin-bottom: 70px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: linear-gradient(90deg, $yellow-700, $white);
+      border-radius: 50%;
+      width: 640px;
+      height: 640px;
+      right: -115px;
+
+      @include r($brackpoint-1460) {
+        right: 0;
+      }
+
+      @include r($brackpoint-1200) {
+        width: 100%;
+        height: 250%;
+      }
+
+      @include r($brackpoint-768) {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    z-index: 5;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    right: 50%;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      button {
+        font-size: 11px;
+        color: $black-700;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        background-color: $yellow-300;
+        transition: background-color 0.5s;
+
+        &:hover {
+          background-color: $white;
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.footer {
+  font-family: $rubik;
+  font-weight: 400;
+  font-size: 14px;
+  color: $grey-700;
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 85px 0 80px;
+    border-bottom: 1px solid $grey-400;
+
+    @include r($brackpoint-576) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px 0 20px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+
+    @include r($brackpoint-576) {
+      max-width: 100%;
+    }
+  }
+
+  &__contacts {
+    @include linecalc(5, 1.5); 
+
+    a:focus {
+      outline: none;
+      color: red;
+    } 
+
+    p {
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      max-width: 240px;
+
+      @include r($brackpoint-576) {
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+    }
+
+    a {
+      text-transform: none;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    font-family: $dmsans;
+    font-weight: 700;
+    font-size: 16px;
+    color: $blue-800;
+    text-transform: uppercase;
+    padding-top: 15px;
+    margin-bottom: 25px;
+    @include linecalc(1, 1.2); 
+
+    @include r($brackpoint-576) {
+      padding-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__option {
+    @include linecalc(1, 1.2); 
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link:focus{
+      outline: none;
+      color: red;
+  }
+  
+
+  &__text {
+    margin-bottom: 40px;
+    max-width: 270px;
+    @include linecalc(5, 1.2); 
+
+    @include r($brackpoint-576) {
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: 15px;
+    }
+
+  }
+
+  &__form {
+    display: flex;
+    justify-content: left;
+
+    @include r($brackpoint-576) {
+      justify-content: center;
+    }
+  }
+
+  &__input {
+    max-width: 170px;
+    padding: 10px 2px 15px 15px;
+    border: 1px solid $yellow-200;
+    background-color: $yellow-200;
+
+    &::placeholder {
+      font-family: $dmsans;
+      font-weight: 400;
+      color: $blue-750;
+      font-size: 12px;
+    }
+  }
+
+  &__btn {
+    padding: 15px 17px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 35px 0;
+
+    @include r($brackpoint-768) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  &__coppy {
+    max-width: 400px;
+    @include linecalc(6, 1.2); 
+
+    @include r($brackpoint-768) {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__wrap {
+    padding-left: 15px;
+    max-width: 80px;
+    transition: transform 0.5s;
+    @include linecalc(1, 1.2); 
+
+    &:not(:last-child) {
+      padding-right: 15px;
+      position: relative;
+
+      &::after {
+        content: "|";
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
