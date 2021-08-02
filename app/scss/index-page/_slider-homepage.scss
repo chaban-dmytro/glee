@@ -1,5 +1,9 @@
 .slider-homepage {
     padding-top: 140px;
+
+    @include r($brackpoint-990) {
+      padding-top: 80px;
+    }
     
   &__item {
     background-color: $yellow-700;
@@ -68,6 +72,10 @@
       svg {
         fill: $blue-300;
       }
+    }
+
+    &:focus {
+      @extend %focus-basic;
     }
 
     span {
@@ -146,6 +154,10 @@
 
         &:hover {
           background-color: $white;
+        }
+
+        &:focus {
+          @extend %focus-basic;
         }
       }
 

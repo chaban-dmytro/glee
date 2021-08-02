@@ -1,0 +1,41 @@
+.top {
+  background-color: $grey-400;
+  padding: 170px 0 30px;
+  text-align: center;
+
+  @include r($brackpoint-990) {
+    padding: 100px 0 30px;
+  }
+
+
+  &__title {
+    font-size: 36px;
+    font-weight: 300;
+    color: $blue-770;
+    margin-bottom: 20px;
+  }
+
+  .breadcrums {
+    &__list{
+      display: flex;
+      justify-content: center;
+    }
+
+    &__item {
+      font-size: 14px;
+      color: $grey-500;
+      padding-right: 20px;
+      position: relative;
+
+      &::after {
+        content: "/";
+        position: absolute;
+        right: 7px;
+      }
+
+      &:last-child::after{
+        display: none;
+      }
+    }
+  }
+}

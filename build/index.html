@@ -17,6 +17,12 @@
   <header class="header">
   <div class="container">
     <nav class="menu">
+      <button class="menu__btn-nav" type="button">
+        <span class="sr-only">Open navigation</span>
+          <svg width="50px" height="50px">
+            <use xlink:href="images/sprite.svg#fast-forward"></use>
+          </svg>
+      </button>
       <a class="header__logo logo" href="#">
         <img class="logo__img" src="images/logo.png" alt="logo">
       </a>
@@ -40,16 +46,16 @@
           <a class="menu__link" href="#">Contact</a>
         </li>
       </ul>
-      <div class="user-nav">
-        <div class="user-nav__item">
+      <div class="user-nav user-nav--active">
+        <!-- <div class="user-nav__item"> -->
           <a class="user-nav__search" href="#">
             <span class="sr-only">search</span>
             <svg width="15px" height="15px">
               <use xlink:href="images/sprite.svg#icon"></use>
             </svg>
           </a>
-        </div>
-        <div class="user-nav__item">
+        <!-- </div> -->
+        <!-- <div class="user-nav__item"> -->
           <a class="user-nav__fav" href="#">
             <span class="sr-only">favorite</span>
             <svg width="20" height="20">
@@ -61,8 +67,8 @@
             <span class="sr-only">favorite things</span>
             <span class="user-nav__num user-nav__num--favorite">0</span>
           </a>
-        </div>
-        <div class="user-nav__item">
+        <!-- </div> -->
+        <!-- <div class="user-nav__item"> -->
           <a class="user-nav__basket" href="#">
             <span class="sr-only">basket</span>
             <svg width="21px" height="21px">
@@ -73,8 +79,8 @@
             <span class="sr-only">basket things</span>
             <span class="user-nav__num">0</span>
           </a>
-        </div>
-        <div class="user-nav__item">
+        <!-- </div> -->
+        <!-- <div class="user-nav__item"> -->
           <a class="user-nav__other" href="#">
             <span class="sr-only">other</span>
             <svg width="21px" height="21px" part="">
@@ -84,8 +90,8 @@
             </svg>
           </a>
         </div>
-      </div>
-      <button class="menu__btn" type="button">
+      <!-- </div> -->
+      <button class="menu__btn menu__btn-a" type="button">
         <span class="sr-only">Open menu</span>
           <svg width="50px" height="50px">
             <use xlink:href="images/sprite.svg#burger"></use>
@@ -464,7 +470,7 @@
     </div>
   </div>
 </section>
-    <section class="new-design">
+      <section class="new-design">
   <div class="container container--sm">
     <h2 class="new-design__title title">New Design</h2>
     <ul class="filters">
@@ -563,7 +569,7 @@
     <ul class="insights__items">
       <li class="insights__wrap">
         <article class="insights-card">
-          <a class="insights-card__imglink" href="#">
+          <a class="insights-card__imglink" tabindex="-1" href="#">
             <img class="insights-card__img" src="images/insights/insights-1.jpg" alt="insight image">
           </a>
           <a class="insights-card__link" href="#">news</a>
@@ -573,12 +579,12 @@
             </h3>
           </a>
           <div class="insights-card__info">
-            <time class="insights-card__data">
-              28 JANUARY, 2020
+            <time class="insights-card__data" pubdate datetime="2020-01-28" >
+              28 January, 2020
             </time>
             <div class="insights-card__author">
               <a class="insights-card__author-link" href="#">
-                BY ADMIN
+                By admin
               </a>
             </div>
           </div>
@@ -586,7 +592,7 @@
       </li>
       <li class="insights__wrap">
         <article class="insights-card">
-          <a class="insights-card__imglink" href="#">
+          <a class="insights-card__imglink" tabindex="-1" href="#">
             <img class="insights-card__img" src="images/insights/insights-2.jpg" alt="insight image">
           </a>
           <a class="insights-card__link" href="#">news</a>
@@ -596,12 +602,12 @@
             </h3>
           </a>
           <div class="insights-card__info">
-            <time class="insights-card__data">
-              28 JANUARY, 2020
+            <time class="insights-card__data" pubdate datetime="2020-01-28" >
+              28 January, 2020
             </time>
             <div class="insights-card__author">
               <a class="insights-card__author-link" href="#">
-                BY ADMIN
+                By admin
               </a>
             </div>
           </div>
@@ -609,7 +615,7 @@
       </li>
       <li class="insights__wrap">
         <article class="insights-card">
-          <a class="insights-card__imglink" href="#">
+          <a class="insights-card__imglink" tabindex="-1" href="#">
             <img class="insights-card__img" src="images/insights/insights-3.jpg" alt="insight image">
           </a>
           <a class="insights-card__link" href="#">news</a>
@@ -619,12 +625,12 @@
             </h3>
           </a>
           <div class="insights-card__info">
-            <time class="insights-card__data">
-              28 JANUARY, 2020
+            <time class="insights-card__data" pubdate datetime="2020-01-28" >
+              28 January, 2020
             </time>
             <div class="insights-card__author">
               <a class="insights-card__author-link" href="#">
-                BY ADMIN
+                By admin
               </a>
             </div>
           </div>
@@ -632,50 +638,48 @@
       </li>
     </ul>
   </div>
-
-  <div class="slider-partners">
-    <div class="contaiter container--sm">
-      <ul class="slider-partners__list">
-        <li class="slider-partners__item">
-          <a class="slider-partners__link" href="#">
-            <img class="slider-partners__img" src="images/insights/sliger-partner-1.png" alt="partner logo">
-          </a>
-        </li>
-        <li class="slider-partners__item">
-          <a class="slider-partners__link" href="#">
-            <img class="slider-partners__img" src="images/insights/sliger-partner-2.png" alt="partner logo">
-          </a>
-        </li>
-        <li class="slider-partners__item">
-          <a class="slider-partners__link" href="#">
-            <img class="slider-partners__img" src="images/insights/sliger-partner-3.png" alt="partner logo">
-          </a>
-        </li>
-        <li class="slider-partners__item">
-          <a class="slider-partners__link" href="#">
-            <img class="slider-partners__img" src="images/insights/sliger-partner-4.png" alt="partner logo">
-          </a>
-        </li>
-        <li class="slider-partners__item">
-          <a class="slider-partners__link" href="#">
-            <img class="slider-partners__img" src="images/insights/sliger-partner-5.png" alt="partner logo">
-          </a>
-        </li>
-        <li class="slider-partners__item">
-          <a class="slider-partners__link" href="#">
-            <img class="slider-partners__img" src="images/insights/sliger-partner-1.png" alt="partner logo">
-          </a>
-        </li>
-        <li class="slider-partners__item">
-          <a class="slider-partners__link" href="#">
-            <img class="slider-partners__img" src="images/insights/sliger-partner-2.png" alt="partner logo">
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
 </section>
+    <div class="slider-partners">
+  <div class="contaiter container--sm">
+    <ul class="slider-partners__list">
+      <li class="slider-partners__item">
+        <a class="slider-partners__link" href="#">
+          <img class="slider-partners__img" src="images/insights/sliger-partner-1.png" alt="partner logo">
+        </a>
+      </li>
+      <li class="slider-partners__item">
+        <a class="slider-partners__link" href="#">
+          <img class="slider-partners__img" src="images/insights/sliger-partner-2.png" alt="partner logo">
+        </a>
+      </li>
+      <li class="slider-partners__item">
+        <a class="slider-partners__link" href="#">
+          <img class="slider-partners__img" src="images/insights/sliger-partner-3.png" alt="partner logo">
+        </a>
+      </li>
+      <li class="slider-partners__item">
+        <a class="slider-partners__link" href="#">
+          <img class="slider-partners__img" src="images/insights/sliger-partner-4.png" alt="partner logo">
+        </a>
+      </li>
+      <li class="slider-partners__item">
+        <a class="slider-partners__link" href="#">
+          <img class="slider-partners__img" src="images/insights/sliger-partner-5.png" alt="partner logo">
+        </a>
+      </li>
+      <li class="slider-partners__item">
+        <a class="slider-partners__link" href="#">
+          <img class="slider-partners__img" src="images/insights/sliger-partner-1.png" alt="partner logo">
+        </a>
+      </li>
+      <li class="slider-partners__item">
+        <a class="slider-partners__link" href="#">
+          <img class="slider-partners__img" src="images/insights/sliger-partner-2.png" alt="partner logo">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
   </main>
 
   <footer class="footer">
@@ -752,7 +756,7 @@
         </p>
         <form class="footer__form" action="#">
           <label class="sr-only" for="e-mail">write your e-mail</label>
-          <input class="footer__input" type="e-mail" id="e-mail" name="e-mail" placeholder="Email address" required>
+          <input class="footer__input" type="e-mail" id="e-mail" name="[subscription]e-mail" placeholder="Email address" required>
           <button class="footer__btn btn" type="submit">Subscribe</button>
         </form>
       </div>

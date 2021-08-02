@@ -1,13 +1,18 @@
 .products {
   text-align: center;
   background-color: $white;
+  padding-top: 70px;
+
+  @include r($brackpoint-990) {
+    padding-top: 35px;
+  }
 
   &__title {
-    padding: 70px 0 30px;
+    margin-bottom: 30px;
     @include linecalc(1, 1.2); 
 
-    @include r($brackpoint-576) {
-      padding: 30px 0 15px;
+    @include r($brackpoint-990) {
+      margin-bottom: 20px;
     }
   }
 
@@ -28,13 +33,14 @@
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       row-gap: 10px;
-  
+      margin-bottom: 30px;
     }
 
     @include r($brackpoint-576) {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(150px, 270px);
       margin: 10px;
-    }
+      grid-auto-rows: 310px;
+   }
   }
 
   &__item {
@@ -51,11 +57,10 @@
 
     @include r($brackpoint-1200) {
       grid-template-columns: 1fr;
-      grid-auto-rows: 500px;
     }
 
-    @include r($brackpoint-576) {
-      grid-auto-rows: 300px;
+    @include r($brackpoint-990) {
+      grid-auto-rows: auto;
     }
   }
 }
@@ -64,19 +69,46 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 75px;
+  margin-bottom: 75px;
+
+  @include r($brackpoint-990) {
+    margin-bottom: 20px;
+  }
 
   @include r($brackpoint-576) {
-    padding-bottom: 20px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    text-align: center;
+
+    &::-webkit-scrollbar {
+      width: 24px;
+      height: 8px;
+      background-color: $yellow-700;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $grey-500;
+      max-width: 20px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: $black-700;
+    }
   }
 
   &__item {
     max-width: 90px;
     margin-bottom: 15px;
     @include linecalc(1, 1); 
+
+    @include r($brackpoint-768) {
+      min-width: 90px;  
+    }
+
     &:not(:last-child) {
       margin-right: 20px;
     }
+
+    
   }
 
   &__btn {
@@ -89,7 +121,13 @@
     transition: color 0.3s;
 
     &:hover {
+      border: none;
+      outline: double;
       color: $black-700;
+    }
+
+    &:focus {
+     @extend %focus-menu;
     }
   }
 
@@ -101,7 +139,6 @@
 .product-card {
   margin: 0 auto;
   padding: 30px;
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -112,6 +149,10 @@
   font-size: 16px;
   color: $blue-700;
   overflow: hidden;
+
+  @include r($brackpoint-576) {
+    padding: 10px;
+  }
 
   &:hover,
   &:focus-within {
@@ -170,6 +211,10 @@
         fill: $white;
       }
     }
+
+    &:focus{
+      @extend %focus-basic;
+    }
   }
 
   &__name {
@@ -197,6 +242,12 @@
   width: 100%;
   position: relative;
 
+  @include r($brackpoint-990) {
+    justify-content: center;
+    margin-top: 0;
+    padding-left: 10px;
+  }
+
   @include r($brackpoint-576) {
     margin-top: 0;
   }
@@ -210,16 +261,29 @@
     height: 100%;
     object-fit: scale-down;
 
+    @include r($brackpoint-990) {
+      position: static;
+      padding: 20px 0;
+      margin-right: 20px;
+      max-height: 260px;
+      max-width: 50%;
+      width: 100%;
+    }
+
     @include r($brackpoint-576) {
-      right: 65%;
-      max-width: 100px;
-      max-height: 200px;
+      max-width: 25%;
     }
   }
 
   &__wrap {
     max-width: 350px;
     margin-right: 15%;
+
+    @include r($brackpoint-990) {
+      max-width: 50%;
+      width: 100%;
+      padding: 10px 0;
+    }
 
     @include r($brackpoint-576) {
       max-width: 350px;
@@ -268,19 +332,19 @@
     color: $blue-400;
 
     @include r($brackpoint-576) {
-      padding: 20px 10px 20px 10px;
+      padding: 15px 10px 15px 10px;
     }
 
     &:hover {
       background-color: $white;
       color: $blue-400;
     }
-
-    svg {
-      fill: $blue-400;
+    
+    &:focus {
+      @extend %focus-basic;
     }
 
-    path {
+    svg, path {
       fill: $blue-400;
     }
 

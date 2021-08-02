@@ -16,11 +16,7 @@ a {
   }
 }
 
-path {
-  transition: fill 0.3s;
-}
-
-svg {
+path, svg {
   transition: fill 0.3s;
 }
 
@@ -41,7 +37,7 @@ svg {
   padding: 0 15px;
 
   @include r($brackpoint-576) {
-    padding: 0 5px;
+    padding: 0 10px;
   }
   
   &--sm {
@@ -64,7 +60,7 @@ svg {
   font-family: $dmsans;
   font-weight: 400;
   color: $white;
-  line-height: 0;
+  line-height: 1;
   background-color: $blue-300;
   border: 1px solid $blue-300;
   transition: color 0.3s, background-color 0.3s;

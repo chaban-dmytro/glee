@@ -6,10 +6,15 @@
 
   &__top {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding: 85px 0 80px;
     border-bottom: 1px solid $grey-400;
+
+    @include r($brackpoint-990) {
+      flex-wrap: wrap;
+      padding: 35px 0 35px;
+      justify-content: space-around;
+    }
 
     @include r($brackpoint-576) {
       flex-direction: column;
@@ -21,14 +26,40 @@
 
   &__logo {
     margin-bottom: 20px;
+
+    a:focus {
+      @extend %focus-basic;
+    } 
+
   }
 
   &__item {
     max-width: 270px;
     width: 100%;
 
+    @include r($brackpoint-990) {
+      margin-bottom: 30px;
+      margin-right: 10px;
+      max-width: 45%;
+    }
+
     @include r($brackpoint-576) {
       max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__item:nth-child(4) {
+
+    @include r($brackpoint-990) {
+      order: -1;
+    }
+  }
+
+  &__item:nth-child(1) {
+
+    @include r($brackpoint-990) {
+      order: -2;
     }
   }
 
@@ -36,8 +67,7 @@
     @include linecalc(5, 1.5); 
 
     a:focus {
-      outline: none;
-      color: red;
+      @extend %focus-menu;
     } 
 
     p {
@@ -71,9 +101,9 @@
     margin-bottom: 25px;
     @include linecalc(1, 1.2); 
 
-    @include r($brackpoint-576) {
-      padding-top: 20px;
-      margin-bottom: 10px;
+    @include r($brackpoint-768) {
+      padding-top: 0;
+      margin-bottom: 15px;
     }
   }
 
@@ -86,8 +116,7 @@
   }
 
   &__link:focus{
-      outline: none;
-      color: red;
+      @extend %focus-menu;
   }
   
 
@@ -118,24 +147,32 @@
     padding: 10px 2px 15px 15px;
     border: 1px solid $yellow-200;
     background-color: $yellow-200;
-
+   
     &::placeholder {
       font-family: $dmsans;
       font-weight: 400;
       color: $blue-750;
       font-size: 12px;
     }
+
+    &:focus {
+      @extend %focus-basic;
+    } 
   }
 
   &__btn {
     padding: 15px 17px;
+
+    &:focus {
+      @extend %focus-basic;
+    } 
   }
 
   &__bottom {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 35px 0;
+    padding: 35px 0;
 
     @include r($brackpoint-768) {
       flex-direction: column;
@@ -161,7 +198,6 @@
   &__wrap {
     padding-left: 15px;
     max-width: 80px;
-    transition: transform 0.5s;
     @include linecalc(1, 1.2); 
 
     &:not(:last-child) {
@@ -173,10 +209,6 @@
         position: absolute;
         right: 0;
       }
-    }
-
-    &:hover {
-      transform: scale(1.2);
     }
   }
 }

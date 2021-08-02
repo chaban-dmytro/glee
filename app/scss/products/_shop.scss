@@ -1,0 +1,377 @@
+.shop {
+  &__inner {
+    display: flex;
+    padding: 110px 0;
+  }
+
+  &__btn {
+    font-family: $rubik;
+    font-weight: 400;
+    color: $blue-700;
+    background-color: $grey-400;
+    padding: 10px 20px 10px 15px;
+    max-width: 270px;
+    width: 100%;
+  }
+
+  &__filters {
+    margin-right: 30px;
+  }
+
+  .filter {
+
+    &__item {
+      width: 270px;
+    }
+
+    &__title {
+      position: relative;
+      font-family: $dmsans;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 30px;
+      padding-right: 20px;
+      text-transform: uppercase;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 9px;
+        width: 40px;
+        height: 2px;
+        transform: translateX(15px);
+        border-bottom: 2px solid $blue-300;
+      }
+    }
+  }
+
+  .filter-category {
+    margin-bottom: 60px;
+
+    &__lable {
+      display: flex;
+    }
+
+    &__input {
+      @extend %checkbox-hidden;
+
+      &:checked+.filter-category__checkbox {
+        background-color: $grey-400;
+      }
+    }
+
+    &__checkbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 45px;
+      padding: 0 20px 0 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: color 0.3s;
+
+      &:hover {
+        border: 2px solid $grey-400;
+      }
+    }
+  }
+
+  .filter-price {
+    margin-bottom: 80px;
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: $blue-700;
+        font-family: $rubik;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .irs--flat {
+    margin-bottom: 20px;
+  }
+
+  .irs--flat .irs-line {
+    top: 29px;
+    height: 2px;
+    background-color: $blue-200;
+    border-radius: 0;
+  }
+
+  .irs--flat .irs-handle>i:first-child {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-color: $blue-300;
+  }
+
+  .irs--flat .irs-bar {
+    top: 27px;
+    height: 4px;
+    background-color: $blue-300;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single,
+  .irs--flat .irs-from:before,
+  .irs--flat .irs-to:before,
+  .irs--flat .irs-single:before,
+  .irs--flat .irs-min,
+  .irs--flat .irs-max {
+    display: none;
+  }
+
+  .filter-recent {
+    .recent {
+
+      &__item {
+        margin-bottom: 20px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s;
+
+        &:hover {
+          border-color: $yellow-700;
+        }
+      }
+
+
+
+      &__link {
+        display: flex;
+      }
+
+      &__img {
+        width: 70px;
+        height: 70px;
+        object-fit: scale-down;
+        border: 2px solid $grey-200;
+        margin-right: 15px;
+      }
+
+      &__wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 14px;
+      }
+
+      &__price {
+        font-size: 15px;
+      }
+    }
+
+    .star {
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    text-align: center;
+
+    .content-filter {
+      padding: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+
+      &__btn {
+        width: 30px;
+        height: 30px;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        margin-right: 25px;
+
+        &.content-filter__btn--active{
+          svg {
+            fill: $blue-800;
+          }
+        }
+        
+        svg {
+          fill: $grey-500;
+          
+          &:hover {
+            fill: $blue-800;
+          }        
+        }
+      }
+    }
+  }
+
+  .products__items {
+    grid-template-columns: repeat(3, 270px);
+    margin-bottom: 105px;
+
+    .product-card {
+      &__description,
+      &__btn,
+      &__btn--active {
+        display: none;
+      }
+    }
+
+    .star--xl {
+      display: none;
+    }
+
+    &.products__items--list {
+      display: block;
+
+      .product-card {
+        padding: 0;
+        flex-direction: row;
+        justify-content: start;
+        height: 500px;
+        margin-bottom: 40px;
+        align-items: center;
+
+        &__img {
+          width: 370px;
+          height: 100%;
+          margin-bottom: 0;
+          border: 2px solid $grey-400;
+          padding: 25px;
+          margin-right: 50px;
+          object-fit: contain;
+        }
+
+        &__info {
+          text-align: left;
+        }
+
+        &__name {
+          font-size: 40px;
+          font-weight: 400;
+          color: $black-300;
+        }
+
+        &__price {
+          font-size: 30px;
+          color: $black-300;
+          margin-bottom: 35px;
+
+          span {
+            &:last-child {
+             display: none;
+            }
+            &:nth-child(2) {
+              float: left;
+            }
+          }
+        }
+
+        &__description {
+          display: block;
+          color: $blue-700;
+          line-height: 1.5;
+          margin-bottom: 25px;
+        }
+
+        &__btn {
+          display: block;
+          padding: 13px 45px;
+          border-radius: 5px;
+          text-transform: uppercase;
+          position: relative;
+          &__btn--inactive {
+            display: none;
+          }
+        }
+
+        &__link-box {
+          position: absolute;
+          transform: translateY(120px);
+          right: -145px;
+          bottom: 25px;
+
+          &__link-box--active {
+            transform: translateY(0);
+          }
+         
+
+          &:hover {
+            transform: translateY(0);
+          }
+        }
+
+        &__link {
+          border-radius: 0;
+
+          &:first-child {
+            display: none;
+          }
+        }
+
+        .star--xl {
+          display: block;
+          padding: 5px 0 30px;
+        }
+      }
+    }
+  }
+
+
+
+
+
+  .page-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+      width: 50px;
+      height: 50px;
+      border: 1px solid $blue-300;
+      color: $blue-700;
+      background-color: $white;
+      align-items: center;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $blue-300;
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      &:last-child {
+        width: 70px;
+      }
+    }
+
+    &__item--active {
+      background-color: $blue-300;
+      color: $white
+    }
+
+    &__pagenum {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+
+
+
+}

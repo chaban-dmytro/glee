@@ -7,7 +7,7 @@
   line-height: 2;
 
   @include r($brackpoint-990) {
-    padding: 20px 0;
+    padding: 30px 0;
   }
 
   &__item {
@@ -16,7 +16,7 @@
     max-width: 285px;
 
     @include r($brackpoint-990) {
-      margin-bottom: 10px;;
+      margin-bottom: 30px;;
     }
 
     &::before {
@@ -56,6 +56,10 @@
     color: $grey-900;
     margin-bottom: 15px;
     @include linecalc(3, 1); 
+
+    @include r($brackpoint-990) {
+      margin-bottom: 10px;;
+    }
   }
 
   &__text {
