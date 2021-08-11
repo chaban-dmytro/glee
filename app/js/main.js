@@ -1,8 +1,8 @@
 $ (function() {
 
   $('.content-filter__btn').on('click', function () {
-    $('.content-filter__btn').removeClass('.content-filter__btn--active');
-    $(this).addClass('.content-filter__btn--active');
+    $('.content-filter__btn').removeClass('content-filter__btn--active');
+    $(this).addClass('content-filter__btn--active');
   });
 
   $('.button-list').on('click', function() {
@@ -12,11 +12,11 @@ $ (function() {
   $('.button-grid').on('click', function() {
     $('.products__items').removeClass('products__items--list');
   });
+  
+  $('.shop__filters-btn').on('click', function() {
+    $('.shop__filters').toggleClass('shop__filters--active');
+  });
 
-  $('.product-card__btn').on('click', function() {
-    $('.product-card__link-box').addClass('.product-card__link-box--active');
-    $('.product-card__btn').addClass('.product-card__btn--inactive');
-  })
 
   $('.filter-price__input').ionRangeSlider({
     type: "double",
@@ -101,9 +101,26 @@ $ (function() {
     }
   });
 
-  
+
+  const cards = document.querySelectorAll('.product-card');
+
+  cards.forEach((card)=>{
+    card.querySelector('button').addEventListener('click', () => {
+      console.log(card);
+      // Если нужна не сама карточка, а что-то вложенное в нее, то пишем
+      // card.querySelector('.нужный класс').classList и тд
+      card.querySelector('.product-card__link-box').classList.toggle('product-card__link-box--active');
+    });
+  });
 
   var mixer = mixitup('.products__items');
   var mixer = mixitup('.new-design__items');
 
+
+ 
+
 });
+
+
+
+

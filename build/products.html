@@ -112,18 +112,22 @@
         </a>
       </li>
       <li class="breadcrums__item">
-        <a class="breadcrums__link" href="#" >
+        <span class="breadcrums__link" href="#" >
           Product list 1
-        </a>
+        </span>
       </li>
     </ul>
   </div>
 </section>
-    <section class="shop">
+
+<section class="shop">
   <div class="container container--sm">
     <div class="shop__inner">
-      <div class="shop__filters">
+      <button class="shop__filters-btn btn">
+        Filters
+      </button>
 
+      <div class="shop__filters">
         <div class="filter__item filter-category">
           <h3 class="filter__title">
             Category
@@ -172,7 +176,7 @@
             Price
           </h3>
           <form class="filter-price__form" action="#">
-            <input class="filter-price__input" type="text" data-min="0.00" data-max="700.00" data-from="100.00"
+            <input class="filter-price__input" type="text" data-min="0.00" data-max="900.00" data-from="100.00"
               data-to="500.00">
             <span class="filter-price__wrap">
               <span>$
@@ -228,7 +232,7 @@
           </form>
         </div>
 
-        <div class="filter__item filter-recent ">
+         <div class="filter__item filter-recent ">
           <h3 class="filter__title">
             Recent products
           </h3>
@@ -265,9 +269,7 @@
             </li>
           </ul>
         </div>
-
       </div>
-
 
       <div class="shop__content">
         <div class="content-filter">
@@ -318,16 +320,12 @@
                 <button class="product-card__btn btn">
                   Add to cart
                 </button>
-              
-            
-                
-
               </div>
             </article>
           </li>
           <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
-              <img class="product-card__img" src="images/products/filter1-2.png" alt="Wooden chair">
+              <img class="product-card__img" src="images/products/filter1-2.png" alt="White chair">
               <div class="product-card__link-box">
                 <a class="product-card__link" href="#">
                   <svg width="20px" height="20px">
@@ -345,13 +343,26 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">White chair</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
+              <div class="product-card__info">
+                <h3 class="product-card__name">White chair</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
             </article>
           </li>
-          <li class="products__item mix category-chairs">
+          <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
-              <img class="product-card__img" src="images/products/filter1-3.png" alt="White chair">
+              <img class="product-card__img" src="images/products/filter1-3.png" alt="Retro table">
               <div class="product-card__link-box">
                 <a class="product-card__link" href="#">
                   <svg width="20px" height="20px">
@@ -369,11 +380,99 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">Retro chair</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Retro table</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
             </article>
           </li>
-          <li class="products__item mix category-chairs">
+
+          <li class="products__item mix category-furnitures">
+            <article class="product-card" tabindex="0">
+              <img class="product-card__img" src="images/products/filter1-4.png" alt="Wooden radio">
+              <div class="product-card__link-box">
+                <a class="product-card__link" href="#">
+                  <svg width="20px" height="20px">
+                    <use xlink:href="images/sprite.svg#products-icon1"></use>
+                  </svg>
+                </a>
+                <a class="product-card__link" href="#">
+                  <svg width="22px" height="20px">
+                    <use xlink:href="images/sprite.svg#products-icon2"></use>
+                  </svg>
+                </a>
+                <a class="product-card__link" href="#">
+                  <svg width="22px" height="18px">
+                    <use xlink:href="images/sprite.svg#products-icon3"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Wooden chair</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
+            </article>
+          </li>
+          <li class="products__item mix category-furnitures">
+            <article class="product-card" tabindex="0">
+              <img class="product-card__img" src="images/products/filter1-5.png" alt="White chair">
+              <div class="product-card__link-box">
+                <a class="product-card__link" href="#">
+                  <svg width="20px" height="20px">
+                    <use xlink:href="images/sprite.svg#products-icon1"></use>
+                  </svg>
+                </a>
+                <a class="product-card__link" href="#">
+                  <svg width="22px" height="20px">
+                    <use xlink:href="images/sprite.svg#products-icon2"></use>
+                  </svg>
+                </a>
+                <a class="product-card__link" href="#">
+                  <svg width="22px" height="18px">
+                    <use xlink:href="images/sprite.svg#products-icon3"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">White chair</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
+            </article>
+          </li>
+          <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
               <img class="product-card__img" src="images/products/filter1-4.png" alt="Retro table">
               <div class="product-card__link-box">
@@ -393,13 +492,27 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">Wooden chair</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Retro table</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
             </article>
           </li>
-          <li class="products__item mix category-lighting">
+
+          <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
-              <img class="product-card__img" src="images/products/filter1-5.png" alt="Wooden radio">
+              <img class="product-card__img" src="images/products/filter1-6.png" alt="Wooden radio">
               <div class="product-card__link-box">
                 <a class="product-card__link" href="#">
                   <svg width="20px" height="20px">
@@ -417,59 +530,24 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">White chair</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
-            </article>
-          </li>
-          <li class="products__item mix category-chairs">
-            <article class="product-card" tabindex="0">
-              <img class="product-card__img" src="images/products/filter1-4.png" alt="Retro table">
-              <div class="product-card__link-box">
-                <a class="product-card__link" href="#">
-                  <svg width="20px" height="20px">
-                    <use xlink:href="images/sprite.svg#products-icon1"></use>
-                  </svg>
-                </a>
-                <a class="product-card__link" href="#">
-                  <svg width="22px" height="20px">
-                    <use xlink:href="images/sprite.svg#products-icon2"></use>
-                  </svg>
-                </a>
-                <a class="product-card__link" href="#">
-                  <svg width="22px" height="18px">
-                    <use xlink:href="images/sprite.svg#products-icon3"></use>
-                  </svg>
-                </a>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Wooden chair</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
               </div>
-              <h3 class="product-card__name">Retro table</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
             </article>
           </li>
-          <li class="products__item mix category-lighting">
-            <article class="product-card" tabindex="0">
-              <img class="product-card__img" src="images/products/filter1-6.png" alt="Wooden chair">
-              <div class="product-card__link-box">
-                <a class="product-card__link" href="#">
-                  <svg width="20px" height="20px">
-                    <use xlink:href="images/sprite.svg#products-icon1"></use>
-                  </svg>
-                </a>
-                <a class="product-card__link" href="#">
-                  <svg width="22px" height="20px">
-                    <use xlink:href="images/sprite.svg#products-icon2"></use>
-                  </svg>
-                </a>
-                <a class="product-card__link" href="#">
-                  <svg width="22px" height="18px">
-                    <use xlink:href="images/sprite.svg#products-icon3"></use>
-                  </svg>
-                </a>
-              </div>
-              <h3 class="product-card__name">Wooden chair</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
-            </article>
-          </li>
-          <li class="products__item mix category-decor">
+          <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
               <img class="product-card__img" src="images/products/filter1-7.png" alt="White chair">
               <div class="product-card__link-box">
@@ -489,11 +567,24 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">White chair</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
+              <div class="product-card__info">
+                <h3 class="product-card__name">White chair</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
             </article>
           </li>
-          <li class="products__item mix category-decor">
+          <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
               <img class="product-card__img" src="images/products/filter1-8.png" alt="Retro table">
               <div class="product-card__link-box">
@@ -513,13 +604,27 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">Retro table</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Retro table</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
             </article>
           </li>
-          <li class="products__item mix category-lighting">
+
+          <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
-              <img class="product-card__img" src="images/products/filter1-9.png" alt="Wooden chair">
+              <img class="product-card__img" src="images/products/filter1-9.png" alt="Wooden radio">
               <div class="product-card__link-box">
                 <a class="product-card__link" href="#">
                   <svg width="20px" height="20px">
@@ -537,11 +642,24 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">Wooden chair</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Wooden chair</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
             </article>
           </li>
-          <li class="products__item mix category-decor">
+          <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
               <img class="product-card__img" src="images/products/filter1-10.png" alt="White chair">
               <div class="product-card__link-box">
@@ -561,11 +679,24 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">White chair</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
+              <div class="product-card__info">
+                <h3 class="product-card__name">White chair</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
             </article>
           </li>
-          <li class="products__item mix category-decor">
+          <li class="products__item mix category-furnitures">
             <article class="product-card" tabindex="0">
               <img class="product-card__img" src="images/products/filter1-11.png" alt="Retro table">
               <div class="product-card__link-box">
@@ -585,31 +716,51 @@
                   </svg>
                 </a>
               </div>
-              <h3 class="product-card__name">Retro table</h3>
-              <span class="product-card__price"><span>$</span>29.00</span>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Retro table</h3>
+                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="product-card__price">
+                  <span>$</span>
+                  <span>29</span>
+                  <span>.00</span>
+                </span>
+                <p class="product-card__description">
+                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                </p>
+                <button class="product-card__btn btn">
+                  Add to cart
+                </button>
+              </div>
             </article>
           </li>
+
+
+
+
+
+          
+          
         </ul>
 
-        <ul class="page-nav">
-          <li class="page-nav__item page-nav__item--active">
-            <a class="page-nav__link" href="#" >
-              <p class="page-nav__pagenum">1</p>
+        <ul class="pagination">
+          <li class="pagination__item pagination__item--active">
+            <a class="pagination__link" href="#" >
+              <p class="pagination__pagenum">1</p>
             </a>
           </li>
-          <li class="page-nav__item">
-            <a class="page-nav__link" href="#" >
-              <p class="page-nav__pagenum">2</p>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#" >
+              <p class="pagination__pagenum">2</p>
             </a>
           </li>
-          <li class="page-nav__item">
-            <a class="page-nav__link" href="#" >
-              <p class="page-nav__pagenum">3</p>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#" >
+              <p class="pagination__pagenum">3</p>
             </a>
           </li>
-          <li class="page-nav__item">
-            <a class="page-nav__link" href="#" >
-              <p class="page-nav__pagenum">Next</p>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#" >
+              <p class="pagination__pagenum">Next</p>
             </a>
           </li>
         </ul>
