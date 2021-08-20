@@ -11,6 +11,7 @@ $white: #fff;
 $blue-200: #c2d2db;
 $blue-300: #a3bbc8;
 $blue-400: #436372;
+$blue-500: #565872;
 $blue-700: #243f4d;
 $blue-750: #234969;
 $blue-770: #222933;
@@ -90,6 +91,14 @@ $brackpoint-576: 576;
   overflow: hidden;
   clip: rect(0 0 0 0);
   position: absolute;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }
 
 

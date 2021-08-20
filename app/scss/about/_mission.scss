@@ -1,0 +1,190 @@
+.mission {
+  padding: 120px 0;
+
+  @include r($brackpoint-990) {
+    padding: 30px 0;
+  }
+
+  &__wrap {
+    display: flex;
+
+    @include r($brackpoint-768) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    max-width: 570px;
+    max-height: 675px;
+    object-fit: cover;
+    margin-right: 45px;
+
+    @include r($brackpoint-1200) {
+      max-width: 40%;
+    }
+
+    @include r($brackpoint-990) {
+      max-height: 100%;
+    }
+
+    @include r($brackpoint-768) {
+      max-width: 100%;
+      margin-right: 0;
+      max-height: 300px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @include r($brackpoint-768) {
+      margin-bottom: 0;
+      align-items: center;
+    }
+  }
+
+  &__number {
+    display: flex;
+
+  }
+
+  &__num {
+    font-weight: 700;
+    color: $blue-300;
+    font-size: 140px;
+    margin-right: 30px;
+
+    @include r($brackpoint-768) {
+      font-size: 100px;
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15px;
+
+    @include r($brackpoint-768) {
+      padding-top: 0;
+    }
+
+    span {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+
+        @include r($brackpoint-768) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @include linecalc(2, 1.5); 
+
+    @include r($brackpoint-768) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 45px;
+    @include linecalc(10, 2.0);
+    
+    @include r($brackpoint-768) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__statistic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 45px;
+    border-top: 2px solid $grey-400;
+
+    @include r($brackpoint-990) {
+      justify-content: center;
+    }
+
+    @include r($brackpoint-768) {
+      padding-top: 15px;
+    }
+  }
+
+  &__statistic-item {
+    display: flex;
+    flex-direction: column;
+    font-family: $dmsans;
+    font-weight: 700;
+    font-size: 16px;
+    color: $grey-900;
+    padding-left: 65px;
+    position: relative;
+    margin-bottom: 20px;
+
+    @include r($brackpoint-990) {
+      justify-content: center;
+    }
+
+    @include r($brackpoint-768) {
+      margin-bottom: 0;
+      padding: 10px 0 10px 65px;
+    }
+
+    &:not(:last-child) {
+      @include r($brackpoint-990) {
+        margin-right: 15px;;
+      }
+    }
+
+
+    span {
+      &:first-child {
+        font-size: 36px;
+        color: $blue-700;
+
+        @include r($brackpoint-768) {
+          font-size: 25px;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 55px;
+      height: 55px;
+    }
+  }
+
+  .mission-projects {
+    &::before {
+      background-image: url(../images/sprite/mission-projects.svg);
+    }
+  }
+
+  .mission-revenue {
+    &::before {
+      background-image: url(../images/sprite/mission-revenue.svg);
+    }
+  }
+
+  .mission-awards {
+    &::before {
+      background-image: url(../images/sprite/mission-awards.svg);
+    }
+  }
+
+
+
+}

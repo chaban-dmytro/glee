@@ -1,4 +1,4 @@
-.top {
+.page-top {
   background-color: $grey-400;
   padding: 165px 0 35px;
   text-align: center;
@@ -7,18 +7,17 @@
     padding: 100px 0 30px;
   }
 
-
   &__title {
     font-size: 36px;
     font-weight: 300;
     color: $blue-770;
     margin-bottom: 10px;
     padding: 0 10px;
-    @include linecalc(1, 1.2); 
+    @include linecalc(1, 1.2);
   }
 
-  .breadcrums {
-    &__list{
+  .breadcrumbs {
+    &__list {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -36,7 +35,7 @@
         right: 7px;
       }
 
-      &:last-child::after{
+      &:last-child::after {
         display: none;
       }
     }

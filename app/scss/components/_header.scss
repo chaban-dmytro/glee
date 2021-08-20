@@ -16,7 +16,7 @@
       margin-right: 5px;
     }
 
-    &:focus{
+    &:focus {
       @extend %focus-basic;
     }
   }
@@ -28,7 +28,7 @@
     max-width: 170px;
     max-height: 40px;
     object-fit: cover;
-  }    
+  }
 }
 
 .menu {
@@ -44,7 +44,7 @@
 
   @include r($brackpoint-990) {
     padding: 10px 0;
-  } 
+  }
 
   &__btn-nav {
     border: none;
@@ -55,7 +55,7 @@
 
     @include r($brackpoint-576) {
       display: block;
-    } 
+    }
 
     svg {
       fill: $blue-300;
@@ -64,12 +64,11 @@
         fill: $yellow-700;
       }
     }
-
-    &__btn-nav--active {
-      transform: rotate(180deg);
-    }
   }
 
+  &__btn-nav--active {
+    transform: rotate(180deg);
+  }
 
   &__list {
     display: flex;
@@ -108,9 +107,9 @@
       text-align: center;
       padding: 0 15px;
     }
-       
+
     &:not(:last-child) {
-    margin-right: 35px;
+      margin-right: 35px;
 
       @include r($brackpoint-1200) {
         margin-right: 20px;
@@ -127,7 +126,7 @@
     font-size: 15px;
     border-bottom: 1px solid transparent;
     transition: color 0.5s, border-bottom 0.5s;
-    @include linecalc(1, 1.2); 
+    @include linecalc(1, 1.2);
 
     @include r($brackpoint-990) {
       display: block;
@@ -139,13 +138,13 @@
       border-color: $black-700;
     }
 
-    &:focus{
+    &:focus {
       @extend %focus-menu;
     }
   }
 
   &__link--active {
-      border-color: $black-700;
+    border-color: $black-700;
   }
 
   &__btn {
@@ -157,13 +156,13 @@
     background-color: transparent;
     border: none;
     display: none;
-    transform: rotate(90deg);
     transition: transform 0.5s;
+    order: 3;
 
     @include r($brackpoint-990) {
       display: block;
     }
-    
+
     svg {
       fill: $blue-300;
 
@@ -174,7 +173,7 @@
   }
 
   &__btn--active {
-    transform: rotate(0);
+    transform: rotate(90deg);
   }
 
   &__bg {
@@ -215,7 +214,7 @@
       }
     }
 
-    &:focus{
+    &:focus {
       @extend %focus-basic;
     }
   }
@@ -250,12 +249,14 @@
     }
 
     &:hover {
-      svg, path {
+
+      svg,
+      path {
         fill: $white;
       }
     }
 
-    &:focus{
+    &:focus {
       @extend %focus-basic;
     }
   }
@@ -264,7 +265,7 @@
     padding: 21px 30px 5px 41px;
     border-radius: 25px 0 0 25px;
     margin-right: 0;
- 
+
 
     &::after {
       content: "";
@@ -292,7 +293,7 @@
     border-radius: 50%;
 
     &--favorite {
-      right: 22px    
+      right: 22px
     }
   }
 }

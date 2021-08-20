@@ -1,25 +1,7 @@
-<section class="top">
-  <h2 class="top__title">Product list 1</h2>
-  <div class="breadcrums">
-    <ul class="breadcrums__list">
-      <li class="breadcrums__item">
-        <a class="breadcrums__link" href="#" >
-          Home
-        </a>
-      </li>
-      <li class="breadcrums__item">
-        <span class="breadcrums__link" href="#" >
-          Product list 1
-        </span>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section class="shop">
+<div class="shop">
   <div class="container container--sm">
     <div class="shop__inner">
-      <button class="shop__filters-btn btn">
+      <button class="shop__filters-btn btn" type="button">
         Filters
       </button>
 
@@ -37,28 +19,28 @@
               </div>
             </label>
             <label class="filter-category__lable">
-              <input type="checkbox" class="filter-category__input">
+              <input class="filter-category__input" type="checkbox" >
               <div class="filter-category__checkbox">
                 <span>Table</span>
                 <span>></span>
               </div>
             </label>
             <label class="filter-category__lable">
-              <input type="checkbox" class="filter-category__input">
+              <input class="filter-category__input" type="checkbox" >
               <div class="filter-category__checkbox">
                 <span>Lamp</span>
                 <span>></span>
               </div>
             </label>
             <label class="filter-category__lable">
-              <input type="checkbox" class="filter-category__input">
+              <input class="filter-category__input" type="checkbox" >
               <div class="filter-category__checkbox">
                 <span>Watch</span>
                 <span>></span>
               </div>
             </label>
             <label class="filter-category__lable">
-              <input type="checkbox" class="filter-category__input">
+              <input class="filter-category__input" type="checkbox" >
               <div class="filter-category__checkbox">
                 <span>Clock</span>
                 <span>></span>
@@ -72,16 +54,16 @@
             Price
           </h3>
           <form class="filter-price__form" action="#">
-            <input class="filter-price__input" type="text" data-min="0.00" data-max="900.00" data-from="100.00"
-              data-to="500.00">
-            <span class="filter-price__wrap">
+            <input class="filter-price__input" type="number" data-min="0.00" data-max="1000.00" data-from="100.00"
+            data-to="500.00">
+            <div class="filter-price__wrap">
               <span>$
-                <span class="filter-price__from"></span>
+                <input class="filter-price__from" type="text"  value="0">
               </span>
               <span>$
-                <span class="filter-price__to"></span>
+                <input class="filter-price__to" type="text"  value="0">
               </span>
-            </span>
+            </div>
           </form>
         </div>
 
@@ -135,9 +117,9 @@
           <ul class="recent">
             <li class="recent__item">
               <a class="recent__link" href="#">
-                <img class="recent__img" src="../../images/products/recent-img-1.png" alt="pendant lamp">
+                <img class="recent__img" src="../images/products/recent-img-1.png" alt="pendant lamp">
                 <div class="recent__wrap">
-                  <p class="recent__title">Pendant lamp</p>
+                  <h3 class="recent__title">Pendant lamp</h3>
                   <span class="star" data-rateyo-rating="4"></span>
                   <p class="recent__price">23<span>$</span></p>
                 </div>
@@ -145,9 +127,9 @@
             </li>
             <li class="recent__item">
               <a class="recent__link" href="#">
-                <img class="recent__img" src="../../images/products/recent-img-2.png" alt="pendant lamp">
+                <img class="recent__img" src="../images/products/recent-img-2.png" alt="pendant lamp">
                 <div class="recent__wrap">
-                  <p class="recent__title">Pendant lamp</p>
+                  <h3 class="recent__title">Pendant lamp</h3>
                   <span class="star" data-rateyo-rating="4"></span>
                   <p class="recent__price">23<span>$</span></p>
                 </div>
@@ -155,9 +137,9 @@
             </li>
             <li class="recent__item">
               <a class="recent__link" href="#">
-                <img class="recent__img" src="../../images/products/recent-img-3.png" alt="pendant lamp">
+                <img class="recent__img" src="../images/products/recent-img-3.png" alt="pendant lamp">
                 <div class="recent__wrap">
-                  <p class="recent__title">Pendant lamp</p>
+                  <h3 class="recent__title">Pendant lamp</h3>
                   <span class="star" data-rateyo-rating="4"></span>
                   <p class="recent__price">23<span>$</span></p>
                 </div>
@@ -169,12 +151,12 @@
 
       <div class="shop__content">
         <div class="content-filter">
-          <button class="content-filter__btn content-filter__btn--active button-grid">
+          <button class="content-filter__btn content-filter__btn--active button-grid" type="button">
             <svg width="30px" height="30px">
               <use xlink:href="images/sprite.svg#grid"></use>
             </svg>
           </button>
-          <button class="content-filter__btn button-list">
+          <button class="content-filter__btn button-list" type="button">
             <svg width="30px" height="30px">
               <use xlink:href="images/sprite.svg#list"></use>
             </svg>
@@ -204,7 +186,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">Wooden chair</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -213,7 +195,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -241,7 +223,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">White chair</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -250,7 +232,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -278,7 +260,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">Retro table</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -287,7 +269,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -316,7 +298,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">Wooden chair</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -325,7 +307,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -353,7 +335,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">White chair</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -362,7 +344,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -390,7 +372,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">Retro table</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -399,7 +381,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -428,7 +410,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">Wooden chair</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -437,7 +419,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -465,7 +447,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">White chair</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -474,7 +456,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -502,7 +484,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">Retro table</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -511,7 +493,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -540,7 +522,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">Wooden chair</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -549,7 +531,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -577,7 +559,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">White chair</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -586,7 +568,7 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
@@ -614,7 +596,7 @@
               </div>
               <div class="product-card__info">
                 <h3 class="product-card__name">Retro table</h3>
-                <span class="star--xl" data-rateyo-rating="4"></span>
+                <span class="star-xl" data-rateyo-rating="4"></span>
                 <span class="product-card__price">
                   <span>$</span>
                   <span>29</span>
@@ -623,41 +605,11 @@
                 <p class="product-card__description">
                   consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 </p>
-                <button class="product-card__btn btn">
+                <button class="product-card__btn btn" type="button">
                   Add to cart
                 </button>
               </div>
             </article>
-          </li>
-
-
-
-
-
-          
-          
-        </ul>
-
-        <ul class="pagination">
-          <li class="pagination__item pagination__item--active">
-            <a class="pagination__link" href="#" >
-              <p class="pagination__pagenum">1</p>
-            </a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#" >
-              <p class="pagination__pagenum">2</p>
-            </a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#" >
-              <p class="pagination__pagenum">3</p>
-            </a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#" >
-              <p class="pagination__pagenum">Next</p>
-            </a>
           </li>
         </ul>
 
@@ -665,4 +617,4 @@
 
     </div>
   </div>
-</section>
+</div>

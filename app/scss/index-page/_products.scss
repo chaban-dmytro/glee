@@ -186,6 +186,10 @@
     transform: translateY(150px);
     transition: transform 0.5s;
 
+    @include r($brackpoint-990) {
+      transform: translateY(0);
+    }
+
     svg {
       fill: $blue-300;
     }

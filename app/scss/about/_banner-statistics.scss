@@ -1,0 +1,104 @@
+.banner-statistics {
+  background-color: $yellow-700;
+  padding: 75px 0;
+
+  @include r($brackpoint-990) {
+    padding: 10px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include r($brackpoint-768) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 210px;
+    width: 100%;
+
+    @include r($brackpoint-768) {
+      max-width: 130px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $blue-300;
+      width: 33px;
+      height: 33px;
+      top: 35px;
+      right: 70px;
+      border-radius: 50%;
+
+      @include r($brackpoint-768) {
+        right: calc(50% - 17px);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 45px;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100px;
+      height: 100px;
+
+      @include r($brackpoint-768) {
+        left: calc(50% - 50px);
+      }
+    }
+
+    span {
+      display: block;
+      font-family: $dmsans;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+
+      @include r($brackpoint-768) {
+        font-size: 10px;
+      }
+
+      &:first-child {
+        font-size: 36px;
+        padding: 80px 0 20px;
+
+        @include r($brackpoint-990) {
+          padding: 70px 0 0;
+        }
+
+        @include r($brackpoint-768) {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .item-clients {
+    &::after {
+      background-image: url(../images/about/banner-1.svg);
+    }
+  }
+  
+  .item-delivered {
+    &::after {
+      background-image: url(../images/about/banner-2.svg);
+    }  }
+  
+  .item-worktime {
+    &::after {
+      background-image: url(../images/about/banner-3.svg);
+    }  }
+  
+  .item-brands {
+    &::after {
+      background-image: url(../images/about/banner-4.svg);
+    }  }
+}

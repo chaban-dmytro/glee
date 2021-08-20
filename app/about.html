@@ -1,0 +1,26 @@
+@@include('./parts/components/_head.html', {
+  "title": "Adout-us"
+})
+
+<body>
+
+  @@include('./parts/components/_header.html')
+  @@include('./parts/components/_breadcrumds.html', {
+    "title": "About Us"
+  })
+
+  <main class="main">
+    @@include('./parts/about/_mission.html')
+    @@include('./parts/about/_banner-statistics.html')
+    @@include('./parts/about/_our-team.html')
+    @@include('./parts/index-page/_insights.html')
+    @@include('./parts/index-page/_slider-partners.html')
+   
+  </main>
+
+  @@include('./parts/components/_footer.html') 
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
