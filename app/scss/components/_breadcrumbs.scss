@@ -7,6 +7,10 @@
     padding: 100px 0 30px;
   }
 
+  @include r($brackpoint-576) {
+    padding: 85px 0 15px;
+  }
+
   &__title {
     font-size: 36px;
     font-weight: 300;

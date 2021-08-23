@@ -17,6 +17,8 @@ $ (function() {
     $('.shop__filters').toggleClass('shop__filters--active');
   });
 
+  
+
 
   // $('.filter-price__input').ionRangeSlider({
   //   type: "double",
