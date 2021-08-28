@@ -1,0 +1,371 @@
+.goods {
+  padding: 113px 0 75px;
+
+  @include r($brackpoint-990) {
+    padding: 20px 0 20px;
+  }
+
+  .shop__filters {
+    min-width: 270px
+  }
+}
+
+.blog-details {
+  line-height: 1.9;
+
+  p {
+    @include r($brackpoint-576) {
+      font-size: 15px;    
+    }
+  }
+
+  &__top-text {
+    margin-bottom: 35px;
+
+    @include r($brackpoint-576) {
+      margin-bottom: 20px;
+    }
+
+    p:first-child {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 500;
+    background-color: $grey-400;
+    border-left: 6px solid $blue-300;
+    padding: 20px 90px 20px 33px;
+    margin-bottom: 45px;
+
+    @include r($brackpoint-576) {
+      padding: 10px 5px 10px 5px;
+      margin-bottom: 20px;
+      font-size: 15px;
+      }
+  }
+
+  &__author {
+    padding-left: 45px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $blue-300;
+      width: 20px;
+      height: 3px;
+      left: 0px;
+      top: 13px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    height: 210px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+
+    @include r($brackpoint-768) {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px 1px;
+    }
+  }
+
+  &__img {
+    max-width: 320px;
+    width: 100%;
+    object-fit: cover;
+    margin-right: 30px;
+
+    @include r($brackpoint-768) {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    @include linecalc (5, 1.9);
+
+    @include r($brackpoint-576) {
+      padding-top: 0;
+    }
+
+
+    p:first-child {
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 18px;
+
+      @include r($brackpoint-576) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__last {
+    margin-bottom: 60px;
+
+    @include r($brackpoint-576) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contact {
+    border-top: 2px solid $grey-300;
+    border-bottom: 2px solid $grey-300;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include r($brackpoint-576) {
+      flex-direction: column;
+    }
+
+    &-img {
+      max-width: 76px;
+      width: 100%;
+      height: 76px;
+      object-fit: cover;
+      margin-right: 25px;
+    }
+
+    &-name {
+      color: $grey-500;
+
+      a {
+        font-weight: 500;
+        font-size: 18px;
+        color: $black-300;
+
+        &:hover {
+          color: $yellow-700;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  &__social {
+    padding-right: 30px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+
+    span {
+      width: 60px;
+      color: $black-300;
+    }
+
+    a {
+      color: $grey-500;
+
+      &:hover {
+        color: $blue-750;
+      }
+    }
+
+    svg {
+      fill: $grey-500;
+      margin-right: 15px;
+
+      &:hover {
+        fill: $blue-750;
+      }
+    }
+  }
+}
+
+.comments {
+  padding: 60px 0;
+
+  @include r($brackpoint-990) {
+    padding: 20px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    color: $blue-400;
+    margin-bottom: 25px;
+
+    @include r($brackpoint-990) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content {
+    padding: 29px 0 28px;
+    display: flex;
+
+    @include r($brackpoint-576) {
+      flex-direction: column;
+      padding: 10px 0 10px;
+    }
+  }
+
+  &__answer {
+    margin-left: 130px;
+    border-bottom: 2px solid $grey-400;
+    border-top: 2px solid $grey-400;
+
+    @include r($brackpoint-576) {
+      margin-left: 30px;
+      border-color: $blue-700;
+    }
+  }
+
+  &__logo {
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    margin-right: 30px;
+    object-fit: cover;
+
+    @include r($brackpoint-576) {
+      margin: 0 auto; 
+      margin-bottom: 10px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include r($brackpoint-576) {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    &-name {
+      font-weight: 700;
+      color: $blue-400;
+    }
+
+    &-date {
+      font-size: 14px;
+      color: $grey-500;
+    }
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    @include linecalc (10, 1.9);
+
+    @include r($brackpoint-576) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__reply {
+    color: $blue-400;
+
+    &:hover {
+      color: $yellow-700;
+      svg{
+        fill: $yellow-700;
+      }
+
+    }
+
+    svg {
+      fill: $blue-400;
+    }
+  }
+}
+
+.comment-form {
+  margin-bottom: 50px;
+
+  @include r($brackpoint-576) {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    color: $blue-400;
+    margin-bottom: 45px;
+
+    @include r($brackpoint-576) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__lable {
+    display: flex;
+
+    @include r($brackpoint-576) {
+      flex-direction: column;
+    }
+  }
+
+  &__name,
+  &__mail,
+  &__text {
+    border: 1px solid $grey-400;
+    margin-bottom: 20px;
+    height: 25px;
+    padding: 0 40px 0 20px;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+  }
+
+  &__name {
+    margin-right: 25px;
+    width: 100%;
+    height: 50px;
+    background-image: url('../images/icons/name.svg');
+  }
+
+  &__mail {
+    width: 100%;
+    height: 50px;
+    background-image: url('../images/icons/mail.svg');
+  }
+
+  &__text {
+    width: 100%;
+    height: 120px;
+    padding-top: 15px;
+    background-image: url('../images/icons/comment.svg');
+    background-position: 98% 15%;
+    resize: none;
+    margin-bottom: 35px;
+
+    @include r($brackpoint-576) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    padding: 15px 30px;
+
+    @include r($brackpoint-576) {
+      padding: 10px 20px;
+    }
+  }
+}
