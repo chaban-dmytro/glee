@@ -150,6 +150,76 @@ $inputTo.on("input", function () {
     ]
   })
 
+  $('.product-details__preview').slick({
+    asNavFor: '.product-details__big',
+    dots: false,
+    arrows: false,
+    draggable: false,
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          vertical: false,
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 577,
+        settings: {
+          vertical: false,
+          slidesToShow: 1,
+        }
+      }
+    ]
+  })
+
+  $('.product-details__big').slick({
+    asNavFor: '.product-details__preview',
+    dots: false,
+    arrows: false,
+    draggable: false,
+    autoplay: false,
+    fade: true
+  })
+
+  $('.related-products__items').slick({
+    dots: false,
+    arrows: true,
+    draggable: false,
+    autoplay: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 577,
+        settings: {
+          slidesToShow: 1,
+          arrows: false
+        }
+      }
+    ]
+  })
+
+ 
+
+
   $(window).scroll(function() {
     var height = $(window).scrollTop();
      /*Если сделали скролл на 100px задаём новый класс для header*/
