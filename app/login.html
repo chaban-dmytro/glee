@@ -1,0 +1,57 @@
+@@include('./parts/components/_head.html', {
+"title": "Log in"
+})
+
+<body>
+
+  @@include('./parts/components/_header.html')
+  @@include('./parts/components/_breadcrumds.html', {
+  "title": "Log in"
+  })
+
+  <main class="main">
+
+    <section class="modal">
+      <form class="modal__form" action="#">
+        <lable class="modal__lable">
+          <div class="sr-only">enter your username or email address</div>
+          Username or email address*
+          <input class="modal__input" type="text" maxlength="30" required>
+        </lable>
+        <lable class="modal__lable">
+          <div class="sr-only">enter your pasword</div>
+          Password*
+          <input class="modal__input" type="password" maxlength="30" required>
+        </lable>
+        <button class="modal__btn btn" type="submit">
+          Log in
+        </button>
+        <div class="modal__wrap">
+          <label class="modal__lable-check">
+            <input class="modal__input-check" type="checkbox">
+            <span class="check-style"></span>
+            Remember me
+          </label>
+          <a class="modal__link" href="#">
+            Lost your password?
+          </a>
+        </div>
+      </form>
+      <a class="modal__link modal__problem" href="#">
+        Not registered? No problem
+      </a>
+      <button class="modal__btn btn btn__white" type="submit">
+        Create an account
+      </button>
+    </section>
+
+    @@include('./parts/index-page/_slider-partners.html')
+
+  </main>
+
+  @@include('./parts/components/_footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

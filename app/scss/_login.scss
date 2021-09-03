@@ -1,0 +1,120 @@
+.modal {
+  padding: 115px 10px;
+  max-width: 490px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: $blue-400;
+
+  @include r($brackpoint-990) {
+    padding: 50px 10px;
+  }
+
+  @include r($brackpoint-576) {
+    padding: 30px 10px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border: 2px solid $grey-300;
+    margin: 10px 0 27px;
+    font-size: 22px;
+    padding: 0 10px;
+    transition: border-color 0.3s;
+
+    @include r($brackpoint-576) {
+      height: 45px;
+      margin: 10px 0 15px;
+    }
+
+    &:focus {
+      outline: transparent;
+      border-color: $blue-750;
+    }
+  }
+
+  &__btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include r($brackpoint-576) {
+      padding: 15px 0;
+    }
+
+    &:focus {
+      outline: transparent;
+      border-color: $blue-750;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $grey-300;
+    padding: 35px 0 33px;
+    margin-bottom: 30px;
+
+    .modal__lable-check {
+      padding-left: 28px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .modal__input-check {
+      @extend %checkbox-hidden;
+
+      &:checked+.check-style::after {
+        opacity: 1;
+      }
+
+      &:focus+.check-style {
+        box-shadow: 0 0 0 1px $blue-300;
+      }
+    }
+
+    .check-style {
+      position: absolute;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      background-color: $grey-300;
+      border-radius: 20%;
+
+      &::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        top: 2px;
+        left: 2px;
+        position: absolute;
+        background-image: url('../images/icons/checked.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+    }
+  }
+
+  &__problem {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .btn__white {
+    border: 2px solid $blue-300;
+    color: $blue-700;
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $blue-300;
+    }
+  }
+}

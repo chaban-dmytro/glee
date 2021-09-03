@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="icon" href="images/glee.ico" type="image/ico">
   <link rel="shortcut icon" href="images/glee.ico" type="image/ico">
-  <title>Contact</title>
+  <title>Log in</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -99,7 +99,7 @@
   </div>
 </header>
   <div class="page-top">
-  <h1 class="page-top__title">Contact</h1>
+  <h1 class="page-top__title">Log in</h1>
   <div class="breadcrumbs">
     <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item">
@@ -109,7 +109,7 @@
       </li>
       <li class="breadcrumbs__item">
         <span class="breadcrumbs__link" href="#" >
-          Contact
+          Log in
         </span>
       </li>
     </ul>
@@ -118,181 +118,40 @@
 
   <main class="main">
 
-    <div class="contact">
-      <div class="container container--sm">
-        <div class="contact__top">
-          <a class="contact__link" href="#">
-            Write Here
-          </a>
-          <h3 class="contact__title title">
-            Get In Touch
-          </h3>
-          <ul class="contact__list">
-            <li class="contact__item">
-              <span>
-                <svg width="31px" height="44px">
-                  <use xlink:href="images/sprite.svg#address"></use>
-                </svg>
-              </span>
-              <p class="contact__item-title">
-                Address
-              </p>
-              <address class="contact__info">
-                <a class="contact__info-link" href="#">
-                  2416 Mapleview Drive <br> Tampa, FL 33634
-                </a>
-              </address>
-            </li>
-            <li class="contact__item">
-              <span>
-                <svg width="31px" height="44px">
-                  <use xlink:href="images/sprite.svg#mail"></use>
-                </svg>
-              </span>
-              <p class="contact__item-title">
-                Our Email
-              </p>
-              <address class="contact__info">
-                <p class="contact__email">
-                  Main Email:
-                  <a class="contact__info-link" href="mailto:contact@Glee.com">
-                    contact@website.com
-                  </a>
-                </p>
-                <p class="contact__email">
-                  Inquiries:
-                  <a class="contact__info-link" href="mailto:contact@Glee.com">
-                    info@mail.com
-                  </a>
-                </p>
-              </address>
-            </li>
-            <li class="contact__item">
-              <span>
-                <svg width="31px" height="44px">
-                  <use xlink:href="images/sprite.svg#phone"></use>
-                </svg>
-              </span>
-              <p class="contact__item-title">
-                Our Phone
-              </p>
-              <address class="contact__info">
-                <p class="contact__phone">
-                  Official Telephone:
-                  <a class="contact__info-link" href="tel:+8323475843">
-                    0029129102320
-                  </a>
-                </p>
-                <p class="contact__phone">
-                  Mobile:
-                  <a class="contact__info-link" href="tel:+8323475843">
-                    000 2324 39493
-                  </a>
-                </p>
-              </address>
-            </li>
-          </ul>
-        </div>
-        <div class="contact__bottom">
-          <form class="comment-form" action="#">
-            <lable class="comment-form__lable">
-              <label class="sr-only" for="name">write your name</label>
-              <input class="comment-form__name" type="text" name="name" id="name" placeholder="Name" maxlength="30">
-              <label class="sr-only" for="email">write your e-mail</label>
-              <input class="comment-form__mail" type="email" name="email" id="email" placeholder="email" maxlength="40">
-            </lable>
-            <label class="sr-only" for="comment">write your comment</label>
-            <textarea class="comment-form__text" maxlength="250" id="comment" placeholder="Message"></textarea>
-            <button class="comment-form__btn btn" type="submit">
-              Send message
-            </button>
-          </form>
-          <a href="https://goo.gl/maps/uTU4hhhAZtVnVWG47" class="map__link">
-            <img class="map" src="images/map.jpg" alt="map">
+    <section class="modal">
+      <form class="modal__form" action="#">
+        <lable class="modal__lable">
+          <div class="sr-only">enter your username or email address</div>
+          Username or email address*
+          <input class="modal__input" type="text" maxlength="30" required>
+        </lable>
+        <lable class="modal__lable">
+          <div class="sr-only">enter your pasword</div>
+          Password*
+          <input class="modal__input" type="password" maxlength="30" required>
+        </lable>
+        <button class="modal__btn btn" type="submit">
+          Log in
+        </button>
+        <div class="modal__wrap">
+          <label class="modal__lable-check">
+            <input class="modal__input-check" type="checkbox">
+            <span class="check-style"></span>
+            Remember me
+          </label>
+          <a class="modal__link" href="#">
+            Lost your password?
           </a>
         </div>
-      </div>
-    </div>
+      </form>
+      <a class="modal__link modal__problem" href="#">
+        Not registered? No problem
+      </a>
+      <button class="modal__btn btn btn__white" type="submit">
+        Create an account
+      </button>
+    </section>
 
-    <section class="insights">
-  <div class="container container--sm">
-    <div class="insights__top">
-      <h2 class="insights__title title">Our Insights & Articles</h2>
-      <a class="insights__title-link" href="#">View All</a>
-    </div>
-    <ul class="insights__items">
-      <li class="insights__wrap">
-        <article class="insights-card">
-          <a class="insights-card__imglink" tabindex="-1" href="#">
-            <img class="insights-card__img" src="images/insights/insights-1.jpg" alt="insight image">
-          </a>
-          <a class="insights-card__link" href="#">news</a>
-          <a class="insights-card__text-link" href="#">
-            <h3 class="insights-card__text">
-              Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </h3>
-          </a>
-          <div class="insights-card__info">
-            <time class="insights-card__data" pubdate datetime="2020-01-28" >
-              28 January, 2020
-            </time>
-            <div class="insights-card__author">
-              <a class="insights-card__author-link" href="#">
-                By admin
-              </a>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li class="insights__wrap">
-        <article class="insights-card">
-          <a class="insights-card__imglink" tabindex="-1" href="#">
-            <img class="insights-card__img" src="images/insights/insights-2.jpg" alt="insight image">
-          </a>
-          <a class="insights-card__link" href="#">news</a>
-          <a class="insights-card__text-link" href="#">
-            <h3 class="insights-card__text">
-              Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            </h3>
-          </a>
-          <div class="insights-card__info">
-            <time class="insights-card__data" pubdate datetime="2020-01-28" >
-              28 January, 2020
-            </time>
-            <div class="insights-card__author">
-              <a class="insights-card__author-link" href="#">
-                By admin
-              </a>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li class="insights__wrap">
-        <article class="insights-card">
-          <a class="insights-card__imglink" tabindex="-1" href="#">
-            <img class="insights-card__img" src="images/insights/insights-3.jpg" alt="insight image">
-          </a>
-          <a class="insights-card__link" href="#">news</a>
-          <a class="insights-card__text-link" href="#">
-            <h3 class="insights-card__text">
-              Rncididunt ut labore et dolore magna aliqua. Ut enim
-            </h3>
-          </a>
-          <div class="insights-card__info">
-            <time class="insights-card__data" pubdate datetime="2020-01-28" >
-              28 January, 2020
-            </time>
-            <div class="insights-card__author">
-              <a class="insights-card__author-link" href="#">
-                By admin
-              </a>
-            </div>
-          </div>
-        </article>
-      </li>
-    </ul>
-  </div>
-</section>
     <div class="slider-partners">
   <div class="contaiter container--sm">
     <ul class="slider-partners__list">
