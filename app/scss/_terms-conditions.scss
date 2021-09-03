@@ -1,0 +1,44 @@
+.terms {
+  padding-top: 110px;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 500;
+  }
+
+  &__list{
+    counter-reset: myCounter;
+    line-height: 2.1;
+    margin-bottom: 60px;
+  }
+  
+  &__item{
+    list-style: none;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 15px;
+
+    &::before{
+      counter-increment: myCounter;
+      content: '0' counter(myCounter) '.';
+      position: absolute;
+      left: -8px;
+      top: -5px;
+      margin: 5px 10px;
+    }
+  
+    &:nth-child(n+10)::before{
+      content: counter(myCounter) '.';
+    }
+  }
+
+  &__text {
+    line-height: 1.9;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+  
+}

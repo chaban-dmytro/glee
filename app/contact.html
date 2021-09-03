@@ -1,0 +1,121 @@
+@@include('./parts/components/_head.html', {
+"title": "Contact"
+})
+
+<body>
+
+  @@include('./parts/components/_header.html')
+  @@include('./parts/components/_breadcrumds.html', {
+  "title": "Contact"
+  })
+
+  <main class="main">
+
+    <div class="contact">
+      <div class="container container--sm">
+        <div class="contact__top">
+          <a class="contact__link" href="#">
+            Write Here
+          </a>
+          <h3 class="contact__title title">
+            Get In Touch
+          </h3>
+          <ul class="contact__list">
+            <li class="contact__item">
+              <span>
+                <svg width="31px" height="44px">
+                  <use xlink:href="images/sprite.svg#address"></use>
+                </svg>
+              </span>
+              <p class="contact__item-title">
+                Address
+              </p>
+              <address class="contact__info">
+                <a class="contact__info-link" href="#">
+                  2416 Mapleview Drive <br> Tampa, FL 33634
+                </a>
+              </address>
+            </li>
+            <li class="contact__item">
+              <span>
+                <svg width="31px" height="44px">
+                  <use xlink:href="images/sprite.svg#mail"></use>
+                </svg>
+              </span>
+              <p class="contact__item-title">
+                Our Email
+              </p>
+              <address class="contact__info">
+                <p class="contact__email">
+                  Main Email:
+                  <a class="contact__info-link" href="mailto:contact@Glee.com">
+                    contact@website.com
+                  </a>
+                </p>
+                <p class="contact__email">
+                  Inquiries:
+                  <a class="contact__info-link" href="mailto:contact@Glee.com">
+                    info@mail.com
+                  </a>
+                </p>
+              </address>
+            </li>
+            <li class="contact__item">
+              <span>
+                <svg width="31px" height="44px">
+                  <use xlink:href="images/sprite.svg#phone"></use>
+                </svg>
+              </span>
+              <p class="contact__item-title">
+                Our Phone
+              </p>
+              <address class="contact__info">
+                <p class="contact__phone">
+                  Official Telephone:
+                  <a class="contact__info-link" href="tel:+8323475843">
+                    0029129102320
+                  </a>
+                </p>
+                <p class="contact__phone">
+                  Mobile:
+                  <a class="contact__info-link" href="tel:+8323475843">
+                    000 2324 39493
+                  </a>
+                </p>
+
+              </address>
+            </li>
+          </ul>
+        </div>
+        <div class="contact__bottom">
+          <form class="comment-form" action="#">
+            <lable class="comment-form__lable">
+              <label class="sr-only" for="name">write your name</label>
+              <input class="comment-form__name" type="text" name="name" id="name" placeholder="Name" maxlength="30">
+              <label class="sr-only" for="email">write your e-mail</label>
+              <input class="comment-form__mail" type="email" name="email" id="email" placeholder="email" maxlength="40">
+            </lable>
+            <label class="sr-only" for="comment">write your comment</label>
+            <textarea class="comment-form__text" maxlength="250" id="comment" placeholder="Message"></textarea>
+            <button class="comment-form__btn btn" type="submit">
+              Send message
+            </button>
+          </form>
+          <a href="https://goo.gl/maps/uTU4hhhAZtVnVWG47" class="map__link">
+            <img class="map" src="images/map.jpg" alt="map">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    @@include('./parts/index-page/_insights.html')
+    @@include('./parts/index-page/_slider-partners.html')
+
+  </main>
+
+  @@include('./parts/components/_footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
